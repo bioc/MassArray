@@ -1,0 +1,61 @@
+importFrom(utils, browseURL, menu, relist, str, toBibtex)
+
+importFrom(graphics, axis, lines, par, plot, points, rect, segments, text)
+
+importFrom(grDevices, col2rgb, rainbow, replayPlot, rgb)
+
+importFrom(methods, new, slot, validObject)
+
+importFrom(stats, as.ts, coef, dendrapply, deviance, end, formula,
+          frequency, IQR, is.leaf, knots, mad, median, naprint, pf,
+          pnorm, print.anova, printCoefmat, pt, quantile, reformulate,
+          residuals, start, symnum, terms, time, ts, tsp, wilcox.test,
+          write.ftable)
+
+exportClasses(
+	MassArrayPeak,
+	MassArraySpectrum,
+	MassArrayFragment,
+	MassArrayData
+)
+
+S3Method(plot, MassArrayData)
+
+S3Method(sum, MassArraySpectrum)
+
+export(
+	ampliconPrediction,
+	analyzeCpGs,
+	bisConvert,
+	expandSequence,
+	calcMW,
+	calcPercentAdduct,
+	calcPercentConversion,
+	calcMeth,
+	convControl,
+	countCGs,
+	createWiggle,
+	estimatePrimerDimer,
+	evaluateSNPs,
+	findCollisions,
+	findPeaks,
+	findFragments,
+	identifySNPs,
+	inSilicoFragmentation,
+	importEpiTyperData,
+	importEpiTyperData.new,
+	isAssayable,
+	numCollisions,
+	plot.MassArrayData,
+	rnaDigest,
+	sum.MassArraySpectrum
+)
+
+exportMethods(
+	combine,
+	position,
+	"position<-",
+	revComplement,
+	samples,
+	"samples<-"
+)

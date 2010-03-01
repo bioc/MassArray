@@ -1,0 +1,401 @@
+02/20/09 15:47:37	EpiTYPER 
+Amplicon	Reaction	Sample	Peak	Sample mass	Reference mass	Probability	SNR	Height	Sample intensity	Reference intensity	Ref type	Description	
+Example	T Methyl (reverse)	A [Plate1 M18]	Missing peak 1		 1110.7047	    0.0000	    0.0000			    0.1000	UNKN	Doubly charged of 2220.4	
+Example	T Methyl (reverse)	A [Plate1 M18]	Missing peak 2		 1130.7171	    0.0000	    0.0000			    0.2000	UNKN	Doubly charged of 2260.43	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 3	 1192.3067	 1192.7476	    0.2045	    0.5006	   31.5199	 1858.0000	    1.0000	MAIN	5OH-CCCT-3p @289	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 4	 1214.6099	 1214.6099	    0.8781	    4.7179	  289.5362	 2155.0000	    0.1000	ACYC	5PPP-GGG-3OH @0	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 5	 1214.7295	 1214.7295	    0.8776	    4.7090	  289.3565	 2155.0000	    0.1000	NAAD	Sodium (Na) adduct of 1192.75	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 6	 1215.2727	 1215.2727	    0.8928	    5.0090	  308.1767	 2174.0000	    0.1000	UNKN	Doubly charged of 2429.54	
+Example	T Methyl (reverse)	A [Plate1 M18]	Missing peak 7		 1223.2724	    0.0000	    0.0000			    0.1000	UNKN	Doubly charged of 2445.54	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 8	 1232.7723	 1232.7723	    0.4470	    1.2992	   89.9217	 1971.0000	    1.0000	MAIN	5OH-ACCT-3p @199	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 9	 1255.3463	 1254.7541	    0.9313	    6.0351	  399.0526	 3929.0000	    0.1000	NAAD	Sodium (Na) adduct of 1232.77	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 10	 1255.8895	 1255.2973	    0.9985	   26.9413	 1781.5712	 4209.0000	    0.1000	UNKN	Doubly charged of 2509.59	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 11	 1272.7969	 1272.7969	    0.8480	    4.1728	  279.0652	 2187.0000	    2.0000	MAIN	5OH-AACT-3p @103; 5OH-AACT-3p @383	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 12	 1278.1007	 1278.1007	    0.9948	   13.1216	  886.2304	 2797.0000	    0.0000	NEW 		
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 13	 1294.7787	 1294.7787	    0.6087	    2.0582	  139.9280	 2053.0000	    0.2000	NAAD	Sodium (Na) adduct of 1272.8	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 14	 1295.3219	 1295.3219	    0.6629	    2.3839	  161.8695	 2075.0000	    0.2000	UNKN	Doubly charged of 2589.64	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 15	 1303.3216	 1303.3216	    0.0580	    0.1331	    9.7166	 1922.0000	    0.1000	UNKN	Doubly charged of 2605.64	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 16	 1316.0283	 1315.3342	    0.4920	    1.4806	  105.5885	 2036.0000	    0.1000	UNKN	Doubly charged of 2629.66	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 17	 1319.3908	 1319.3908	    0.7447	    3.0072	  197.6779	 2103.0000	    0.0000	UNKN		
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 18	 1351.2203	 1351.4386	    0.9160	    5.4250	  218.4829	 2089.0000	    0.0000	UNKN		
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 19	 1361.1265	 1361.3064	    0.9744	    8.0607	  326.3837	 2185.0000	    0.0000	NEW 	G3T1 (0.49)	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 20	 1444.2176	 1444.2731	    0.8943	    4.9241	  198.8500	 2070.0000	    0.0000	UNKN		
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 21	 1460.7010	 1459.9268	    0.9080	    5.1964	  214.7138	 2086.0000	    0.1000	UNKN	Doubly charged of 2918.85	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 22	 1482.6073	 1481.9328	    0.9986	   16.4389	  726.1831	 2606.0000	    1.0000	MAIN	5OH-CCCCT-3p @163	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 23	 1504.5713	 1503.9146	    0.8072	    3.5897	  163.5893	 2101.0000	    0.0849	NAAD	Sodium (Na) adduct of 1481.93	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 24	 1522.3858	 1521.9574	    0.8705	    4.4554	  284.9093	 2200.0000	    1.0000	NOME	5OH-CCACT-3p @168	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 25	 1538.7549	 1537.9567	    0.0044	    0.0142	    1.0082	 2006.0000	    1.0000	METH	5OH-CCGCT-3p @168	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 26	 1544.6302	 1543.8196	    0.5559	    1.7758	  115.4032	 2397.0000	    0.1000	ACYC	5PPP-GGGA-3OH @0	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 27	 1544.7498	 1543.9392	    0.6334	    2.1940	  142.5804	 2503.0000	    0.1000	NAAD	Sodium (Na) adduct of 1521.96	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 28	 1545.2930	 1544.4825	    0.8873	    4.7721	  310.1226	 2465.0000	    0.1000	UNKN	Doubly charged of 3087.96	
+Example	T Methyl (reverse)	A [Plate1 M18]	Missing peak 29		 1552.4821	    0.0000	    0.0000			    0.1000	UNKN	Doubly charged of 3103.96	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 30	 1561.0122	 1559.9385	    0.4068	    1.1424	   87.1101	 2128.0000	    0.1000	NAAD	Sodium (Na) adduct of 1537.96	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 31	 1561.6655	 1560.5918	    0.4061	    1.1398	   87.1101	 2046.0000	    0.0000	NEW 	A2C2T1 (1.39)	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 32	 1565.5482	 1564.4948	    0.8874	    4.7732	  331.0534	 2231.0000	    0.1000	UNKN	Doubly charged of 3127.98	
+Example	T Methyl (reverse)	A [Plate1 M18]	Missing peak 33		 1572.4944	    0.0000	    0.0000			    0.1000	UNKN	Doubly charged of 3143.98	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 34	 1585.2650	 1584.5071	    0.8810	    4.6494	  381.3014	 2326.0000	    0.1000	UNKN	Doubly charged of 3168.01	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 35	 1601.5599	 1602.0066	    0.9992	   31.7144	 2582.5074	 4589.0000	    1.0000	MAIN/ANCH	5OH-AAACT-3p @238	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 36	 1623.8142	 1623.9884	    0.9748	    8.0764	  662.6100	 2650.0000	    0.7224	NAAD	Sodium (Na) adduct of 1602.01	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 37	 1635.3538	 1634.5744	    0.7574	    3.0960	  256.3580	 2086.0000	    0.0000	NEW 	A1C1G2T1 (0.57)	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 38	 1642.8107	 1642.0312	    0.9954	   12.3640	 1042.6133	 2795.0000	    2.0000	MAIN	5OH-AAAAT-3p @338; 5OH-AAAAT-3p @284	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 39	 1664.0131	 1664.0131	    0.0883	    0.2185	   15.7111	 2214.0000	    0.1428	NAAD	Sodium (Na) adduct of 1642.03	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 40	 1706.4353	 1706.6010	    0.7015	    2.6357	  197.9869	 2165.0000	    0.0000	UNKN	G4T1 (0.57)	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 41	 1724.1709	 1723.4076	    0.7310	    2.8736	  220.5904	 2050.0000	    0.0000	UNKN		
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 42	 1729.8629	 1729.0996	    0.9244	    5.6338	  440.2959	 2402.0000	    0.1000	UNKN	Doubly charged of 3457.19	
+Example	T Methyl (reverse)	A [Plate1 M18]	Missing peak 43		 1737.0993	    0.0000	    0.0000			    0.1000	UNKN	Doubly charged of 3473.19	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 44	 1745.9528	 1745.0989	    0.6379	    2.2165	  171.6777	 2090.0000	    0.1000	UNKN	Doubly charged of 3489.19	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 45	 1749.9658	 1749.1119	    0.8351	    3.9332	  317.2418	 2186.0000	    0.1000	UNKN	Doubly charged of 3497.22	
+Example	T Methyl (reverse)	A [Plate1 M18]	Missing peak 46		 1753.0986	    0.0000	    0.0000			    0.1000	UNKN	Doubly charged of 3505.19	
+Example	T Methyl (reverse)	A [Plate1 M18]	Missing peak 47		 1757.1116	    0.0000	    0.0000			    0.1000	UNKN	Doubly charged of 3513.22	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 48	 1771.8048	 1771.1179	    0.9992	   23.3958	 1606.2278	 3403.0000	    1.0000	MAIN	5OH-CCCCCT-3p @182	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 49	 1779.9986	 1779.3117	    0.9475	    6.4843	  487.3277	 2308.0000	    0.0000	NEW 		
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 50	 1793.4671	 1793.0997	    0.4664	    1.3754	  145.6572	 2140.0000	    0.3005	NAAD	Sodium (Na) adduct of 1771.12	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 51	 1801.8030	 1801.8098	    0.5081	    1.5477	  182.8653	 2207.0000	    0.0000	UNKN		
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 52	 1811.8192	 1811.1425	    0.9884	    9.8145	 1274.5385	 3155.0000	    1.0000	MAIN	5OH-ACCCCT-3p @343	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 53	 1833.6830	 1833.1244	    0.4640	    1.3604	  178.2084	 2190.0000	    0.1652	NAAD	Sodium (Na) adduct of 1811.14	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 54	 1851.7902	 1851.1672	    0.9207	    5.5314	  757.6515	 2751.0000	    1.0000	NOME	5OH-CACACT-3p @244	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 55	 1854.3030	 1853.6799	    0.9275	    5.7426	  796.5033	 2883.0000	    0.1000	UNKN	Doubly charged of 3706.35	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 56	 1867.3558	 1867.1665	    0.3694	    1.0123	  134.0998	 2130.0000	    1.0000	METH	5OH-CGCGCT-3p @244	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 57	 1873.3383	 1873.1490	    0.4616	    1.3609	  177.8448	 2295.0000	    0.1000	NAAD	Sodium (Na) adduct of 1851.17	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 58	 1873.8815	 1873.6922	    0.4690	    1.3906	  181.7342	 2547.0000	    0.1000	UNKN	Doubly charged of 3746.38	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 59	 1881.8812	 1881.6919	    0.0201	    0.0517	    6.9977	 2128.0000	    0.1000	UNKN	Doubly charged of 3762.38	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 60	 1883.3551	 1883.1658	    0.2122	    0.5325	   72.2043	 2125.0000	    1.0000	METH	5OH-CGCGCT-3p @244	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 61	 1889.2180	 1889.0287	    0.0777	    0.2412	   31.7185	 3090.0000	    0.1000	ACYC	5PPP-GGGAG-3OH @0	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 62	 1889.3376	 1889.1483	    0.1253	    0.3634	   47.6518	 3404.0000	    0.1000	NAAD	Sodium (Na) adduct of 1867.17	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 63	 1889.8808	 1889.6915	    0.0870	    0.2677	   34.9881	 3899.0000	    0.1000	UNKN	Doubly charged of 3778.38	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 64	 1891.9266	 1891.1918	    0.9992	   48.5594	 6770.8338	 8231.0000	    6.0000	MAIN/ANCH	5OH-AAACCT-3p @377; 5OH-ACAACT-3p @205; 5OH-CCAAAT-3p @191; 5OH-AAACCT-3p @369; 5OH-CAAACT-3p @358; 5OH-CAACAT-3p @88	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 65	 1905.9580	 1905.1476	    0.4769	    1.4125	  177.8946	 2325.0000	    0.1000	NAAD	Sodium (Na) adduct of 1883.17	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 66	 1907.9405	 1907.1911	    0.7314	    2.8705	  389.0063	 2430.0000	    1.0000	METH	5OH-CAACGT-3p @88	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 67	 1913.9230	 1913.1736	    0.9642	    7.2808	  988.6900	 3018.0000	    0.6878	NAAD	Sodium (Na) adduct of 1891.19	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 68	 1929.9223	 1929.1729	    0.6713	    2.4323	  323.9430	 2848.0000	    0.1000	NAAD	Sodium (Na) adduct of 1907.19	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 69	 1931.9658	 1931.2164	    0.9984	   15.6265	 2060.6657	 4005.0000	    1.0000	NOME	5OH-ACAAAT-3p @78	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 70	 1946.5274	 1947.2157	    0.9952	   11.8476	 1553.4403	 3732.0000	    1.0000	METH	5OH-ACGAAT-3p @78	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 71	 1952.5099	 1953.1982	    0.7476	    3.0131	  392.0975	 2300.0000	    0.2405	NAAD	Sodium (Na) adduct of 1931.22	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 72	 1956.4158	 1957.1041	    0.6186	    2.1094	  276.5560	 2290.0000	    0.1000	UNKN	Doubly charged of 3913.2	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 73	 1969.9744	 1969.1975	    0.9003	    5.0855	  641.6553	 2900.0000	    0.1000	NAAD	Sodium (Na) adduct of 1947.22	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 74	 1972.0179	 1971.2410	    0.9985	   16.3111	 2020.4874	 4175.0000	    1.0000	MAIN	5OH-AAAAAT-3p @31	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 75	 1993.9114	 1993.2228	    0.8438	    4.0506	  402.3202	 2439.0000	    0.2237	NAAD	Sodium (Na) adduct of 1971.24	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 76	 2010.8277	 2011.1701	    0.8637	    4.3463	  286.1567	 2322.0000	    0.0000	UNKN		
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 77	 2039.0750	 2038.2971	    0.9900	   10.1754	  465.1354	 2467.0000	    0.1000	UNKN	Doubly charged of 4075.59	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 78	 2051.6715	 2051.5154	    0.7303	    2.8651	  130.8850	 2120.0000	    0.0000	UNKN	G5T1 (0.28)	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 79	 2124.5103	 2124.5577	    0.9678	    7.5142	  367.0878	 2356.0000	    0.0000	UNKN		
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 80	 2146.3655	 2146.3701	    0.9152	    5.3852	  270.4603	 2253.0000	    0.0000	UNKN		
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 81	 2218.7995	 2218.2384	    0.2434	    0.6146	   59.2432	 2895.0000	    0.1000	ACYC	5PPP-GGGAGA-3OH @0	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 82	 2220.9430	 2220.4015	    0.9994	   26.1661	 2394.1405	 4187.0000	    1.0000	MAIN	5OH-ACACAAT-3p @254	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 83	 2242.9175	 2242.3833	    0.7158	    2.7452	  244.7200	 2301.0000	    0.1269	NAAD	Sodium (Na) adduct of 2220.4	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 84	 2251.0281	 2250.4940	    0.6902	    2.5557	  225.4881	 2193.0000	    0.0000	UNKN	A2C2G2T1 (1.91)	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 85	 2260.9603	 2260.4261	    0.9994	   79.1603	 7083.0905	 8481.0000	    2.0000	MAIN/ANCH	5OH-AAACAAT-3p @24; 5OH-AAAAACT-3p @150	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 86	 2282.5524	 2282.4080	    0.9962	   12.8867	 1199.7345	 3242.0000	    0.3551	NAAD	Sodium (Na) adduct of 2260.43	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 87	 2291.6633	 2291.5188	    0.9986	   16.0079	 1523.9859	 3449.0000	    0.0000	NEW 	A3C1G2T1 (0.91)	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 88	 2313.8856	 2313.8576	    0.9483	    6.4698	  622.9834	 2617.0000	    0.0000	UNKN	A5G1T1 (2.59)	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 89	 2356.9259	 2357.0512	    0.4286	    1.2215	  127.2184	 2163.0000	    0.0000	UNKN		
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 90	 2413.6922	 2413.6506	    0.6932	    2.5758	  196.0931	 2215.0000	    0.0000	UNKN		
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 91	 2429.8870	 2429.5374	    0.9994	   41.0940	 3064.9006	 5096.0000	    1.0000	NOME	5OH-CAACCCCT-3p @174	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 92	 2445.8368	 2445.5367	    0.2461	    0.6223	   48.1088	 2059.0000	    1.0000	METH	5OH-CGACCCCT-3p @174	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 93	 2451.8365	 2451.5192	    0.9336	    5.9310	  465.9932	 2472.0000	    0.1351	NAAD	Sodium (Na) adduct of 2429.54	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 94	 2467.6778	 2467.5186	    0.3596	    0.9828	   75.1384	 2116.0000	    0.1000	NAAD	Sodium (Na) adduct of 2445.54	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 95	 2474.9995	 2474.9076	    0.9303	    5.8397	  443.6924	 2452.0000	    0.0000	UNKN		
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 96	 2492.5843	 2492.8065	    0.6838	    2.5148	  209.2433	 2240.0000	    0.0000	UNKN		
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 97	 2510.0880	 2509.5867	    0.9995	   43.3584	 3638.9035	 5173.0000	    1.0000	MAIN	5OH-ACACACAT-3p @262	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 98	 2532.2848	 2531.5685	    0.9485	    6.4674	  573.0288	 2596.0000	    0.2093	NAAD	Sodium (Na) adduct of 2509.59	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 99	 2548.5016	 2547.4482	    0.3716	    1.0157	   87.9883	 2094.0000	    0.1000	ACYC	5PPP-GGGAGAA-3OH @0	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 100	 2589.8880	 2589.6359	    0.9994	   62.1624	 4699.7874	 6681.0000	    2.0000	MAIN/ANCH	5OH-AAACAAAT-3p @349; 5OH-AAAACAAT-3p @225	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 101	 2606.1555	 2605.6352	    0.6713	    2.4308	  175.2029	 2153.0000	    1.0000	METH	5OH-AAAACGAT-3p @225	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 102	 2612.1380	 2611.6177	    0.9807	    8.6882	  621.5074	 2581.0000	    0.2741	NAAD	Sodium (Na) adduct of 2589.64	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 103	 2627.8132	 2627.6170	    0.8358	    3.9899	  280.4845	 2853.0000	    0.1000	NAAD	Sodium (Na) adduct of 2605.64	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 104	 2629.8566	 2629.6605	    0.9988	   25.0121	 1654.4854	 3976.0000	    1.0000	MAIN	5OH-AAAAAAAT-3p @328	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 105	 2652.4142	 2651.6423	    0.9016	    5.0559	  318.6138	 2318.0000	    0.1112	NAAD	Sodium (Na) adduct of 2629.66	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 106	 2803.8801	 2803.9731	    0.9712	    7.8125	  353.9943	 2289.0000	    0.0000	UNKN	C5G3T1 (2.77)	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 107	 2841.6803	 2841.3092	    0.9949	   11.8091	  611.2315	 2554.0000	    0.1000	UNKN	Doubly charged of 5681.61	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 108	 2849.6552	 2849.3088	    0.4055	    1.1544	   65.6130	 1999.0000	    0.1000	UNKN	Doubly charged of 5697.61	
+Example	T Methyl (reverse)	A [Plate1 M18]	Missing peak 109		 2857.3085	    0.0000	    0.0000			    0.1000	UNKN	Doubly charged of 5713.61	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 110	 2865.6545	 2865.3081	    0.0607	    0.1404	    8.2862	 1961.0000	    0.1000	UNKN	Doubly charged of 5729.61	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 111	 2893.3582	 2892.6572	    0.1546	    0.3693	   22.2100	 1989.0000	    0.1000	ACYC	5PPP-GGGAGAAG-3OH @0	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 112	 2918.9308	 2918.8456	    0.9995	   63.8729	 3586.9463	 5319.0000	    1.0000	MAIN	5OH-AAAACAAAT-3p @94	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 113	 2940.9541	 2940.8275	    0.9899	   10.1662	  578.5099	 2495.0000	    0.1302	NAAD	Sodium (Na) adduct of 2918.85	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 114	 3055.6811	 3055.9408	    0.4984	    1.5086	   99.6973	 2043.0000	    0.0000	UNKN	A2G6T1 (1.07)	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 115	 3087.9068	 3087.9569	    0.9996	   69.6223	 4450.8304	 6109.0000	    1.0000	NOME/ANCH	5OH-AACCCCCAAT-3p @107	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 116	 3104.3679	 3103.9562	    0.8624	    4.3479	  290.2675	 2256.0000	    1.0000	METH	5OH-AACCCCCGAT-3p @107	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 117	 3110.3504	 3109.9387	    0.9801	    8.5679	  569.5199	 2489.0000	    0.1802	NAAD	Sodium (Na) adduct of 3087.96	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 118	 3127.8937	 3127.9815	    0.9994	   44.4695	 3111.2887	 4863.0000	    1.0000	NOME	5OH-ACCCCAAAAT-3p @270	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 119	 3144.3568	 3143.9809	    0.4911	    1.4795	  102.5977	 2073.0000	    1.0000	METH	5OH-ACCCCGAAAT-3p @270	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 120	 3150.3655	 3149.9634	    0.9739	    7.9911	  547.4020	 2522.0000	    0.1197	NAAD	Sodium (Na) adduct of 3127.98	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 121	 3167.8868	 3168.0062	    0.9994	   59.1390	 4012.6243	 5965.0000	    1.0000	MAIN/ANCH	5OH-AACACAAACT-3p @117	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 122	 3190.1423	 3189.9880	    0.9758	    8.1681	  526.5816	 2483.0000	    0.1568	NAAD	Sodium (Na) adduct of 3168.01	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 123	 3230.6911	 3230.5558	    0.6991	    2.6237	  150.6558	 2093.0000	    0.1000	UNKN	Doubly charged of 6460.1	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 124	 3238.0224	 3237.8663	    0.0465	    0.1106	    6.2394	 1935.0000	    0.1000	ACYC	5PPP-GGGAGAAGG-3OH @0	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 125	 3456.9529	 3457.1913	    0.9995	   81.1822	 4095.5349	 5953.0000	    1.0000	NOME/ANCH	5OH-CACCAACAAAT-3p @37	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 126	 3473.3030	 3473.1906	    0.9471	    6.4544	  333.0967	 2218.0000	    1.0000	METH	5OH-CGCCGACGAAT-3p @37	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 127	 3479.2855	 3479.1731	    0.9908	   10.3187	  540.0994	 2422.0000	    0.1766	NAAD	Sodium (Na) adduct of 3457.19	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 128	 3488.9372	 3489.1899	    0.0661	    0.1623	    8.4859	 1894.0000	    1.0000	METH	5OH-CGCCGACGAAT-3p @37	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 129	 3496.9558	 3497.2159	    0.9995	   57.6614	 2974.8115	 4918.0000	    1.0000	NOME	5OH-AACCAACAAAT-3p @67	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 130	 3504.9291	 3505.1892	    0.7446	    3.0259	  155.2922	 2042.0000	    1.0000	METH	5OH-CGCCGACGAAT-3p @37	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 131	 3512.9625	 3513.2152	    0.4680	    1.3851	   72.0757	 1950.0000	    1.0000	METH	5OH-AACCAACGAAT-3p @67	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 132	 3518.9376	 3519.1977	    0.9815	    8.8255	  454.3847	 2330.0000	    0.1279	NAAD	Sodium (Na) adduct of 3497.22	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 133	 3526.9183	 3527.1710	    0.0055	    0.0191	    0.9769	 1897.0000	    0.1000	NAAD	Sodium (Na) adduct of 3505.19	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 134	 3534.4960	 3535.1970	    0.5225	    1.6202	   84.5768	 1978.0000	    0.1000	NAAD	Sodium (Na) adduct of 3513.22	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 135	 3633.3664	 3633.4152	    0.5064	    1.5427	   89.4821	 1975.0000	    0.0000	UNKN	A9G1T1 (0.13), A2C2G6T1 (0.18)	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 136	 3706.0147	 3706.3518	    0.9996	  110.2275	 5347.0552	 7254.0000	    1.0000	MAIN/ANCH	5OH-ACACCAACCACT-3p @12	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 137	 3728.2604	 3728.3336	    0.9983	   14.8699	  693.4608	 2533.0000	    0.1983	NAAD	Sodium (Na) adduct of 3706.35	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 138	 3746.0352	 3746.3764	    0.9996	   64.1153	 2898.9196	 4739.0000	    1.0000	NOME/ANCH	5OH-ACAACCCAAACT-3p @211	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 139	 3762.0247	 3762.3757	    0.9731	    8.0345	  371.2406	 2218.0000	    1.0000	METH	5OH-ACGACCCGAACT-3p @211	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 140	 3768.0072	 3768.3582	    0.9914	   10.5741	  486.7356	 2355.0000	    0.1062	NAAD	Sodium (Na) adduct of 3746.38	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 141	 3777.9510	 3778.3751	    0.1728	    0.4180	   19.3741	 1846.0000	    1.0000	METH	5OH-ACGACCCGAACT-3p @211	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 142	 3783.3431	 3784.3576	    0.6731	    2.4480	  114.5668	 2047.0000	    0.1000	NAAD	Sodium (Na) adduct of 3762.38	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 143	 3783.7755	 3784.7900	    0.6727	    2.4446	  114.5668	 2064.0000	    0.0000	UNKN	C6G5T1 (1.56), A7C4T1 (1.61)	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 144	 3799.3424	 3800.3569	    0.6915	    2.5721	  123.2291	 1980.0000	    0.1000	NAAD	Sodium (Na) adduct of 3778.38	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 145	 3893.3326	 3893.3181	    0.8220	    3.7637	  151.4042	 1990.0000	    0.0000	UNKN	A1C10G1T1 (1.86), A4C3G4T1 (2.90)	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 146	 3912.8111	 3913.2001	    0.9996	   47.0914	 1882.0196	 3711.0000	    1.0000	MAIN	5PPP-GGGAGAAGGCT-3p @0	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 147	 3934.8288	 3935.1820	    0.9959	   12.3008	  509.2358	 2337.0000	    0.0975	NAAD	Sodium (Na) adduct of 3913.2	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 148	 3981.9754	 3982.1600	    0.9948	   11.8792	  502.0852	 2309.0000	    0.0000	UNKN	A9G2T1 (3.66), A2C2G7T1 (3.71), A5C1G5T1 (4.31)	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 149	 4075.1179	 4075.5862	    0.9995	   67.1884	 3100.8598	 4873.0000	    1.0000	MAIN/ANCH	5OH-ACACCCAAAAACT-3p @129	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 150	 4097.5381	 4097.5680	    0.9798	    8.5865	  404.2333	 2201.0000	    0.1940	NAAD	Sodium (Na) adduct of 4075.59	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 151	 4113.8422	 4113.8720	    0.8737	    4.5161	  207.1383	 1982.0000	    0.0000	UNKN	A1C6G5T1 (1.69), A8C4T1 (1.74)	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 152	 4150.3802	 4150.5822	    0.7665	    3.1730	  150.2379	 1944.0000	    0.0000	UNKN	A6C4G2T1 (2.97)	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 153	 4479.6695	 4479.3344	    0.7849	    3.3570	   98.6645	 1803.0000	    0.0000	UNKN	A7C4G2T1 (2.52), C6G7T1 (2.57)	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 154	 4519.3361	 4519.3352	    0.8794	    4.6274	  125.5427	 1795.0000	    0.0000	UNKN	A8C3G2T1 (2.49), A1C5G7T1 (2.54)	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 155	 4561.2511	 4561.6808	    0.9622	    7.1883	  169.6321	 1843.0000	    0.0000	UNKN	A5C3G5T1 (3.16), A12C1T1 (3.21), A2C10G2T1 (4.20), A9C2G2T1 (4.81), A2C4G7T1 (4.87)	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 156	 4808.2606	 4808.1607	    0.8930	    4.8813	  100.5970	 1719.0000	    0.0000	UNKN	A8C4G2T1 (2.13), A1C6G7T1 (2.18), G13T1 (4.75)	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 157	 4848.3235	 4848.3325	    0.9372	    6.0487	  123.2534	 1734.0000	    0.0000	UNKN	A9C3G2T1 (2.28), A2C5G7T1 (2.33)	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 158	 5346.7638	 5346.7997	    0.9732	    7.9655	  140.3633	 1678.0000	    0.0000	UNKN	A7C7G2T1 (2.43), C9G7T1 (2.48), A10G5T1 (3.46), A3C2G10T1 (3.52), A6C1G8T1 (4.51)	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 159	 5386.9056	 5386.8891	    0.9380	    6.1005	  121.0942	 1664.0000	    0.0000	UNKN	A8C6G2T1 (2.49), A1C8G7T1 (2.54), A4C1G10T1 (3.58), C2G13T1 (4.39), A7G8T1 (4.44)	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 160	 5427.4393	 5427.1326	    0.9351	    5.9904	  117.9015	 1664.0000	    0.0000	UNKN	A9C5G2T1 (2.71), A2C7G7T1 (2.76), A5G10T1 (3.80), A1C1G13T1 (4.17)	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 161	 5596.0238	 5596.0314	    0.8425	    4.0335	   87.4054	 1608.0000	    0.0000	UNKN	A6C9G2T1 (2.50), A16T1 (3.48), A9C2G5T1 (3.54), A2C4G10T1 (3.59), A5C3G8T1 (4.44), A12C1G3T1 (4.49)	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 162	 5681.1775	 5681.6103	    0.9996	  101.4166	 2434.1130	 3966.0000	    1.0000	NOME/ANCH	5OH-CACAAAAACAAACCACAT-3p @49	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 163	 5697.1768	 5697.6096	    0.9849	    9.5282	  219.2923	 1768.0000	    1.0000	METH	5OH-CGCGAAAACAAACCGCAT-3p @49	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 164	 5703.1593	 5703.5921	    0.9977	   14.1137	  359.8720	 1894.0000	    0.2502	NAAD	Sodium (Na) adduct of 5681.61	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 165	 5713.1761	 5713.6089	    0.5117	    1.5710	   40.1596	 1590.0000	    1.0000	METH	5OH-CGCGAAAACAAACCGCAT-3p @49	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 166	 5717.2551	 5717.6879	    0.8934	    4.9043	  125.5879	 1725.0000	    0.0000	UNKN	A1C2G13T1 (2.80), A8G8T1 (2.85), A5C7G5T1 (3.89), A12C5T1 (3.95), A9C6G2T1 (4.08), A2C8G7T1 (4.13), A2C14G2T1 (4.93)	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 167	 5719.1586	 5719.5915	    0.7944	    3.4715	   88.8704	 1692.0000	    0.1000	NAAD	Sodium (Na) adduct of 5697.61	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 168	 5729.1764	 5729.6083	    0.4541	    1.3314	   33.9825	 1560.0000	    1.0000	METH	5OH-CGCGAAAACAAACCGCAT-3p @49	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 169	 5735.1580	 5735.5908	    0.8361	    3.9703	  101.7053	 1619.0000	    0.1000	NAAD	Sodium (Na) adduct of 5713.61	
+Example	T Methyl (reverse)	A [Plate1 M18]	Missing peak 170		 5751.5901	    0.0000	    0.0000			    0.1000	NAAD	Sodium (Na) adduct of 5729.61	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 171	 5755.5962	 5756.0290	    0.9182	    5.4988	  141.4328	 1658.0000	    0.0000	UNKN	C14G4T1 (1.41), A10C5G2T1 (2.40), A3C7G7T1 (2.45), A6G10T1 (3.49), A2C1G13T1 (4.49)	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 172	 5965.3176	 5965.3299	    0.8665	    4.4054	  110.8275	 1599.0000	    0.0000	UNKN	A8C8G2T1 (2.56), A1C10G7T1 (2.61), A11C1G5T1 (3.60), A4C3G10T1 (3.65), C4G13T1 (4.32), A7C2G8T1 (4.37), A14G3T1 (4.43)	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 173	 6006.6847	 6006.5785	    0.8191	    3.7324	   87.6099	 1576.0000	    0.0000	UNKN	A1C3G13T1 (3.10), A8C1G8T1 (3.15), A9C7G2T1 (3.78), A2C9G7T1 (3.84), A5C8G5T1 (4.19), A12C6T1 (4.24), A12G5T1 (4.82), A5C2G10T1 (4.88)	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 174	 6336.4571	 6335.8400	    0.8820	    4.6731	   89.2244	 1550.0000	    0.0000	UNKN	C16G4T1 (2.85), A2C3G13T1 (3.04), A9C1G8T1 (3.10), A10C7G2T1 (3.84), A3C9G7T1 (3.89), A6C8G5T1 (4.14), A13C6T1 (4.19), A13G5T1 (4.88), A6C2G10T1 (4.93)	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 175	 6460.6010	 6460.1037	    0.9996	   28.6157	  510.5089	 1953.0000	    1.0000	MAIN/ANCH	5OH-ACAAACAAAAAAAAACAAAT-3p @308	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 176	 6482.5828	 6482.0855	    0.8987	    5.0121	   83.2027	 1529.0000	    0.0927	NAAD	Sodium (Na) adduct of 6460.1	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 177	 6624.2365	 6624.3933	    0.8329	    3.9084	   77.9940	 1493.0000	    0.0000	UNKN	C17G4T1 (2.22), A10C8G2T1 (3.20), A3C10G7T1 (3.26), A2C4G13T1 (3.68), A9C2G8T1 (3.73), A16G3T1 (3.78), A13C1G5T1 (4.24), A6C3G10T1 (4.30), A6C9G5T1 (4.77), A13C7T1 (4.82)	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 178	 6664.4101	 6664.2414	    0.7846	    3.3652	   65.5590	 1483.0000	    0.0000	UNKN	A1C16G4T1 (2.04), A11C7G2T1 (3.03), A4C9G7T1 (3.08), A3C3G13T1 (3.85), A10C1G8T1 (3.91), A14G5T1 (4.07), A7C2G10T1 (4.12), C4G15T1 (4.17), C10G10T1 (4.89), A7C8G5T1 (4.95), A14C6T1 (5.00)	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 179	 6790.3620	 6790.2972	    0.9343	    5.9634	  159.6149	 1559.0000	    0.0000	UNKN	A7C12G2T1 (0.00), C14G7T1 (0.05), A17C3T1 (0.98), A10C5G5T1 (1.04), A3C7G10T1 (1.09), A6G13T1 (2.13)	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 180	 6843.4927	 6843.6843	    0.9982	   15.5363	  393.0517	 1800.0000	    0.0000	NEW 	A3C6G11T1 (1.55), A10C4G6T1 (1.60), A17C2G1T1 (1.65), C13G8T1 (2.59), A7C11G3T1 (2.64), A4C18T1 (3.68), A1C19G2T1 (4.35)	
+Example	T Methyl (reverse)	A [Plate1 M18]	Peak 181	 6913.4772	 6913.4655	    0.7807	    3.3079	   79.9868	 1498.0000	    0.0000	UNKN	C18G4T1 (2.10), A10C9G2T1 (3.09), A3C11G7T1 (3.14), A2C5G13T1 (3.79), A9C3G8T1 (3.84), A16C1G3T1 (3.90), A20T1 (4.08), A13C2G5T1 (4.13), A6C4G10T1 (4.18), A6C10G5T1 (4.88), A13C8T1 (4.93)	
+Example	T Methyl (reverse)	B [Plate1 M20]	Missing peak 1		 1110.7047	    0.0000	    0.0000			    0.1000	UNKN	Doubly charged of 2220.4	
+Example	T Methyl (reverse)	B [Plate1 M20]	Missing peak 2		 1130.7171	    0.0000	    0.0000			    0.2000	UNKN	Doubly charged of 2260.43	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 3	 1175.5730	 1175.2005	    0.1561	    0.3710	   68.7124	 2177.0000	    0.0000	UNKN		
+Example	T Methyl (reverse)	B [Plate1 M20]	Missing peak 4		 1192.7476	    0.0000	    0.0000			    1.0000	MAIN	5OH-CCCT-3p @289	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 5	 1213.7968	 1214.6099	    0.0189	    0.0452	    9.8177	 2578.0000	    0.1000	ACYC	5PPP-GGG-3OH @0	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 6	 1213.9164	 1214.7295	    0.0189	    0.0452	    9.8177	 2578.0000	    0.1000	NAAD	Sodium (Na) adduct of 1192.75	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 7	 1214.7718	 1215.2727	    0.8020	    3.5298	  578.1347	 2760.0000	    0.1000	UNKN	Doubly charged of 2429.54	
+Example	T Methyl (reverse)	B [Plate1 M20]	Missing peak 8		 1223.2724	    0.0000	    0.0000			    0.1000	UNKN	Doubly charged of 2445.54	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 9	 1230.8379	 1230.8379	    0.0077	    0.0178	    4.1546	 2230.0000	    0.1000	K-AD	Potassium (K) adduct of 1192.75	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 10	 1232.7723	 1232.7723	    0.1155	    0.2683	   63.3956	 2293.0000	    1.0000	MAIN	5OH-ACCT-3p @199	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 11	 1255.3431	 1254.7541	    0.9761	    8.7065	 1515.5722	 8578.0000	    0.1000	NAAD	Sodium (Na) adduct of 1232.77	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 12	 1255.8863	 1255.2973	    0.9984	   30.5740	 5323.7146	 9258.0000	    0.1000	UNKN	Doubly charged of 2509.59	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 13	 1270.7615	 1270.8626	    0.0341	    0.0804	   19.4626	 2431.0000	    0.1000	K-AD	Potassium (K) adduct of 1232.77	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 14	 1272.6958	 1272.7969	    0.4481	    1.3004	  314.8344	 2564.0000	    2.0000	MAIN	5OH-AACT-3p @103; 5OH-AACT-3p @383	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 15	 1277.9235	 1278.0595	    0.9908	   10.5116	 1855.2154	 4109.0000	    0.0000	NEW 		
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 16	 1294.3088	 1294.7787	    0.3411	    0.9097	  224.1721	 2612.0000	    0.2000	NAAD	Sodium (Na) adduct of 1272.8	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 17	 1294.8520	 1295.3219	    0.1159	    0.2696	   66.4449	 2522.0000	    0.2000	UNKN	Doubly charged of 2589.64	
+Example	T Methyl (reverse)	B [Plate1 M20]	Missing peak 18		 1303.3216	    0.0000	    0.0000			    0.1000	UNKN	Doubly charged of 2605.64	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 19	 1310.8872	 1310.8872	    0.0164	    0.0382	    9.0018	 2280.0000	    0.2000	K-AD	Potassium (K) adduct of 1272.8	
+Example	T Methyl (reverse)	B [Plate1 M20]	Missing peak 20		 1315.3342	    0.0000	    0.0000			    0.1000	UNKN	Doubly charged of 2629.66	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 21	 1319.6345	 1319.6345	    0.3310	    0.8791	  201.6578	 2455.0000	    0.0000	UNKN		
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 22	 1351.0257	 1351.1519	    0.9691	    7.6204	  832.5660	 3005.0000	    0.0000	NEW 		
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 23	 1361.1565	 1361.2768	    0.9784	    8.4250	  710.8460	 2867.0000	    0.0000	NEW 	G3T1 (0.46)	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 24	 1377.1516	 1377.1307	    0.8624	    4.3252	  304.2288	 2466.0000	    0.0000	UNKN		
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 25	 1444.2969	 1444.2870	    0.9776	    8.3846	  463.5085	 2594.0000	    0.0000	UNKN		
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 26	 1460.4432	 1459.9268	    0.8005	    3.5157	  239.6766	 2355.0000	    0.1000	UNKN	Doubly charged of 2918.85	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 27	 1482.5766	 1481.9328	    0.9939	   11.3948	  924.7377	 3031.0000	    1.0000	MAIN	5OH-CCCCT-3p @163	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 28	 1489.3755	 1488.7317	    0.9194	    5.5015	  456.5648	 2624.0000	    0.0000	UNKN		
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 29	 1504.5008	 1503.9146	    0.4852	    1.4481	  121.3659	 2303.0000	    0.1000	NAAD	Sodium (Na) adduct of 1481.93	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 30	 1519.8511	 1520.0231	    0.1209	    0.2862	   28.7486	 2225.0000	    0.1000	K-AD	Potassium (K) adduct of 1481.93	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 31	 1521.9888	 1521.9574	    0.6913	    2.5610	  275.2067	 2484.0000	    1.0000	NOME	5OH-CCACT-3p @168	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 32	 1537.9567	 1537.9567	    0.2107	    0.5252	   55.1164	 2282.0000	    1.0000	METH	5OH-CCGCT-3p @168	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 33	 1543.8196	 1543.8196	    0.2221	    0.5675	   60.0817	 2417.0000	    0.1000	ACYC	5PPP-GGGA-3OH @0	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 34	 1543.9392	 1543.9392	    0.1919	    0.4830	   51.1354	 2501.0000	    0.1000	NAAD	Sodium (Na) adduct of 1521.96	
+Example	T Methyl (reverse)	B [Plate1 M20]	Missing peak 35		 1544.4825	    0.0000	    0.0000			    0.1000	UNKN	Doubly charged of 3087.96	
+Example	T Methyl (reverse)	B [Plate1 M20]	Missing peak 36		 1552.4821	    0.0000	    0.0000			    0.1000	UNKN	Doubly charged of 3103.96	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 37	 1560.7628	 1559.9385	    0.3463	    0.9287	  103.7742	 2405.0000	    0.1000	NAAD	Sodium (Na) adduct of 1537.96	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 38	 1560.8719	 1560.0477	    0.3463	    0.9287	  103.7742	 2405.0000	    0.1000	K-AD	Potassium (K) adduct of 1521.96	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 39	 1565.2964	 1564.4948	    0.7143	    2.7273	  311.3337	 2491.0000	    0.1000	UNKN	Doubly charged of 3127.98	
+Example	T Methyl (reverse)	B [Plate1 M20]	Missing peak 40		 1572.4944	    0.0000	    0.0000			    0.1000	UNKN	Doubly charged of 3143.98	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 41	 1576.0470	 1576.0470	    0.0597	    0.1395	   15.0555	 2261.0000	    0.1000	K-AD	Potassium (K) adduct of 1537.96	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 42	 1585.2701	 1584.5071	    0.8290	    3.8533	  430.5029	 2655.0000	    0.1000	UNKN	Doubly charged of 3168.01	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 43	 1601.3710	 1602.0066	    0.9992	   45.9323	 5037.7616	 7437.0000	    1.0000	MAIN/ANCH	5OH-AAACT-3p @238	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 44	 1623.5747	 1623.9884	    0.9838	    9.0909	  985.6267	 3282.0000	    0.9175	NAAD	Sodium (Na) adduct of 1602.01	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 45	 1635.2419	 1634.4161	    0.6677	    2.4117	  234.3484	 2458.0000	    0.0000	NEW 	A1C1G2T1 (0.41)	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 46	 1641.0301	 1640.0969	    0.3196	    0.8466	   88.9019	 2568.0000	    0.1000	K-AD	Potassium (K) adduct of 1602.01	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 47	 1642.8571	 1642.0312	    0.9549	    6.8106	  658.1610	 2818.0000	    2.0000	MAIN	5OH-AAAAT-3p @338; 5OH-AAAAT-3p @284	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 48	 1664.0131	 1664.0131	    0.0742	    0.1746	   18.4113	 2372.0000	    0.2000	NAAD	Sodium (Na) adduct of 1642.03	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 49	 1680.1215	 1680.1215	    0.0727	    0.1693	   17.8935	 2273.0000	    0.2000	K-AD	Potassium (K) adduct of 1642.03	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 50	 1706.5404	 1706.5422	    0.8566	    4.2382	  298.9671	 2516.0000	    0.0000	UNKN	G4T1 (0.51)	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 51	 1723.6841	 1723.0622	    0.9556	    6.8743	  487.1377	 2543.0000	    0.0000	NEW 		
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 52	 1729.7215	 1729.0996	    0.9693	    7.6119	  548.0413	 2844.0000	    0.1000	UNKN	Doubly charged of 3457.19	
+Example	T Methyl (reverse)	B [Plate1 M20]	Missing peak 53		 1737.0993	    0.0000	    0.0000			    0.1000	UNKN	Doubly charged of 3473.19	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 54	 1745.5863	 1745.0989	    0.7451	    2.9819	  213.2304	 2414.0000	    0.1000	UNKN	Doubly charged of 3489.19	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 55	 1749.5993	 1749.1119	    0.7022	    2.6453	  196.0107	 2483.0000	    0.1000	UNKN	Doubly charged of 3497.22	
+Example	T Methyl (reverse)	B [Plate1 M20]	Missing peak 56		 1753.0986	    0.0000	    0.0000			    0.1000	UNKN	Doubly charged of 3505.19	
+Example	T Methyl (reverse)	B [Plate1 M20]	Missing peak 57		 1757.1116	    0.0000	    0.0000			    0.1000	UNKN	Doubly charged of 3513.22	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 58	 1771.6846	 1771.1179	    0.9991	   22.3418	 1619.3971	 3826.0000	    1.0000	MAIN	5OH-CCCCCT-3p @182	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 59	 1779.7915	 1779.2248	    0.9974	   14.8320	 1166.4935	 3086.0000	    0.0000	NEW 		
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 60	 1793.7116	 1793.0997	    0.4209	    1.1928	   94.7150	 2349.0000	    0.1000	NAAD	Sodium (Na) adduct of 1771.12	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 61	 1801.2416	 1801.1952	    0.8495	    4.1373	  422.0969	 2617.0000	    0.0000	NEW 		
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 62	 1809.8201	 1809.2082	    0.2629	    0.6700	   69.2762	 2452.0000	    0.1000	K-AD	Potassium (K) adduct of 1771.12	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 63	 1811.7957	 1811.1425	    0.9945	   11.5354	 1233.9949	 3400.0000	    1.0000	MAIN	5OH-ACCCCT-3p @343	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 64	 1833.9664	 1833.1244	    0.5208	    1.6059	  171.8586	 2463.0000	    0.1277	NAAD	Sodium (Na) adduct of 1811.14	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 65	 1850.0396	 1849.2328	    0.2252	    0.5605	   60.1258	 2433.0000	    0.1000	K-AD	Potassium (K) adduct of 1811.14	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 66	 1851.8930	 1851.1672	    0.8872	    4.7625	  522.2341	 2821.0000	    1.0000	NOME	5OH-CACACT-3p @244	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 67	 1854.4058	 1853.6799	    0.9729	    7.9219	  877.5467	 3203.0000	    0.1000	UNKN	Doubly charged of 3706.35	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 68	 1867.3404	 1867.1665	    0.4412	    1.2777	  138.8674	 2358.0000	    1.0000	METH	5OH-CGCGCT-3p @244	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 69	 1873.3229	 1873.1490	    0.4709	    1.3998	  150.4722	 2621.0000	    0.1000	NAAD	Sodium (Na) adduct of 1851.17	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 70	 1873.8662	 1873.6922	    0.4710	    1.3998	  150.4722	 2713.0000	    0.1000	UNKN	Doubly charged of 3746.38	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 71	 1881.8658	 1881.6919	    0.0369	    0.0956	   10.4412	 2349.0000	    0.1000	UNKN	Doubly charged of 3762.38	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 72	 1883.8634	 1883.1658	    0.6721	    2.4541	  277.4993	 2669.0000	    1.0000	METH	5OH-CGCGCT-3p @244	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 73	 1889.2026	 1889.0287	    0.0000	    0.0022	    0.2415	 3360.0000	    0.1000	ACYC	5PPP-GGGAG-3OH @0	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 74	 1889.3222	 1889.1483	    0.0000	    0.0022	    0.2415	 3360.0000	    0.1000	NAAD	Sodium (Na) adduct of 1867.17	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 75	 1889.4314	 1889.2574	    0.1228	    0.3443	   37.3617	 3360.0000	    0.1000	K-AD	Potassium (K) adduct of 1851.17	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 76	 1889.8655	 1889.6915	    0.0853	    0.2511	   27.2497	 3705.0000	    0.1000	UNKN	Doubly charged of 3778.38	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 77	 1891.8894	 1891.1918	    0.9993	   41.4193	 4792.5506	 6729.0000	    6.0000	MAIN	5OH-AAACCT-3p @377; 5OH-ACAACT-3p @205; 5OH-CCAAAT-3p @191; 5OH-AAACCT-3p @369; 5OH-CAAACT-3p @358; 5OH-CAACAT-3p @88	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 78	 1905.8087	 1905.1476	    0.4216	    1.1963	  124.7412	 2533.0000	    0.1000	NAAD	Sodium (Na) adduct of 1883.17	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 79	 1905.9179	 1905.2568	    0.1024	    0.2393	   24.9482	 2533.0000	    0.1000	K-AD	Potassium (K) adduct of 1867.17	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 80	 1907.6927	 1907.1911	    0.8190	    3.7316	  421.6592	 2686.0000	    1.0000	METH	5OH-CAACGT-3p @88	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 81	 1913.6752	 1913.1736	    0.8738	    4.5204	  514.1294	 2889.0000	    0.4197	NAAD	Sodium (Na) adduct of 1891.19	
+Example	T Methyl (reverse)	B [Plate1 M20]	Missing peak 82		 1921.2561	    0.0000	    0.0000			    0.1000	K-AD	Potassium (K) adduct of 1883.17	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 83	 1929.8340	 1929.1729	    0.3048	    0.8032	   76.8882	 2910.0000	    0.1000	NAAD	Sodium (Na) adduct of 1907.19	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 84	 1929.9432	 1929.2821	    0.0667	    0.1606	   15.3776	 2910.0000	    0.6000	K-AD	Potassium (K) adduct of 1891.19	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 85	 1931.8485	 1931.2164	    0.9982	   14.7254	 1646.6119	 3793.0000	    1.0000	NOME	5OH-ACAAAT-3p @78	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 86	 1944.5798	 1945.2814	    0.8168	    3.7497	  421.0899	 3117.0000	    0.1000	K-AD	Potassium (K) adduct of 1907.19	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 87	 1946.5142	 1947.2157	    0.9985	   18.8911	 2105.4497	 5010.0000	    1.0000	METH	5OH-ACGAAT-3p @78	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 88	 1952.4967	 1953.1982	    0.5682	    1.8476	  202.3541	 2491.0000	    0.1000	NAAD	Sodium (Na) adduct of 1931.22	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 89	 1956.4025	 1957.1041	    0.6433	    2.2601	  247.9278	 2391.0000	    0.1000	UNKN	Doubly charged of 3913.2	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 90	 1970.0181	 1969.1975	    0.8857	    4.7871	  496.3529	 3491.0000	    0.1000	NAAD	Sodium (Na) adduct of 1947.22	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 91	 1969.5266	 1969.3067	    0.2014	    0.5274	   44.6172	 3102.0000	    0.1000	K-AD	Potassium (K) adduct of 1931.22	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 92	 1972.0616	 1971.2410	    0.9971	   14.1010	 1386.2702	 3607.0000	    1.0000	MAIN	5OH-AAAAAT-3p @31	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 93	 1985.0519	 1985.3060	    0.5665	    1.8302	  157.1914	 2476.0000	    0.1000	K-AD	Potassium (K) adduct of 1947.22	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 94	 1992.9687	 1993.2228	    0.8370	    3.9628	  330.0061	 2579.0000	    0.1000	NAAD	Sodium (Na) adduct of 1971.24	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 95	 2009.3313	 2009.3313	    0.0566	    0.1439	    8.3820	 2348.0000	    0.1788	K-AD	Potassium (K) adduct of 1971.24	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 96	 2039.0180	 2038.2971	    0.9835	    8.9897	  550.5033	 2779.0000	    0.1000	UNKN	Doubly charged of 4075.59	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 97	 2124.2999	 2124.3462	    0.9973	   13.5207	  790.5325	 2958.0000	    0.0000	NEW 		
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 98	 2146.2345	 2146.3122	    0.8913	    4.8468	  309.4420	 2540.0000	    0.0000	UNKN		
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 99	 2218.7198	 2218.2384	    0.6118	    2.0849	  188.4947	 2887.0000	    0.1000	ACYC	5PPP-GGGAGA-3OH @0	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 100	 2220.8829	 2220.4015	    0.9989	   18.9429	 1711.9616	 4086.0000	    1.0000	MAIN	5OH-ACACAAT-3p @254	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 101	 2242.5501	 2242.3833	    0.4923	    1.4809	  133.3013	 2406.0000	    0.1000	NAAD	Sodium (Na) adduct of 2220.4	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 102	 2258.9666	 2258.4918	    0.9821	    9.5328	  837.2958	 5677.0000	    0.1000	K-AD	Potassium (K) adduct of 2220.4	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 103	 2260.9009	 2260.4261	    0.9990	   59.1221	 5198.7503	 7934.0000	    2.0000	MAIN/ANCH	5OH-AAACAAT-3p @24; 5OH-AAAAACT-3p @150	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 104	 2282.3662	 2282.4080	    0.9900	   10.4325	  933.0314	 3017.0000	    0.2883	NAAD	Sodium (Na) adduct of 2260.43	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 105	 2291.5574	 2291.5992	    0.9993	   29.8730	 2686.6544	 4824.0000	    0.0000	NEW 	A3C1G2T1 (0.83)	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 106	 2298.4746	 2298.5164	    0.7693	    3.2213	  290.1177	 2540.0000	    0.2000	K-AD	Potassium (K) adduct of 2260.43	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 107	 2313.7448	 2313.7363	    0.9818	    8.8021	  791.7143	 3050.0000	    0.0000	UNKN	A5G1T1 (2.71)	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 108	 2413.0085	 2413.1861	    0.6595	    2.3477	  218.7152	 2439.0000	    0.0000	UNKN		
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 109	 2429.8832	 2429.5374	    0.9995	   32.7402	 3012.8168	 5242.0000	    1.0000	NOME	5OH-CAACCCCT-3p @174	
+Example	T Methyl (reverse)	B [Plate1 M20]	Missing peak 110		 2445.5367	    0.0000	    0.0000			    1.0000	METH	5OH-CGACCCCT-3p @174	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 111	 2451.9693	 2451.5192	    0.8390	    3.9846	  398.4764	 2626.0000	    0.0745	NAAD	Sodium (Na) adduct of 2429.54	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 112	 2467.6118	 2467.5186	    0.4640	    1.3861	  104.6095	 2449.0000	    0.1000	NAAD	Sodium (Na) adduct of 2445.54	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 113	 2467.7210	 2467.6277	    0.4640	    1.3861	  104.6095	 2449.0000	    0.0893	K-AD	Potassium (K) adduct of 2429.54	
+Example	T Methyl (reverse)	B [Plate1 M20]	Missing peak 114		 2475.7204	    0.0000	    0.0000			    0.0000	UNKN		
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 115	 2482.2147	 2482.1215	    0.3864	    1.0737	   78.2324	 2376.0000	    0.0000	UNKN	A2C4G1T1 (3.44)	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 116	 2483.7203	 2483.6270	    0.3870	    1.0759	   78.2324	 2311.0000	    0.1000	K-AD	Potassium (K) adduct of 2445.54	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 117	 2492.1272	 2491.9773	    0.5172	    1.5896	  170.0326	 2389.0000	    0.0000	UNKN		
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 118	 2510.1900	 2509.5867	    0.9995	   43.4567	 4833.3300	 6637.0000	    1.0000	MAIN/ANCH	5OH-ACACACAT-3p @262	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 119	 2532.4983	 2531.5685	    0.9739	    7.9734	  952.4052	 3130.0000	    0.2569	NAAD	Sodium (Na) adduct of 2509.59	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 120	 2547.0545	 2547.4482	    0.2133	    0.5319	   60.4600	 2349.0000	    0.1000	ACYC	5PPP-GGGAGAA-3OH @0	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 121	 2547.2832	 2547.6769	    0.2133	    0.5319	   60.4600	 2349.0000	    0.1000	K-AD	Potassium (K) adduct of 2509.59	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 122	 2555.0819	 2555.4756	    0.4993	    1.5106	  171.8260	 2442.0000	    0.0000	UNKN	A1C3G3T1 (2.11)	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 123	 2562.4685	 2562.8622	    0.4125	    1.1628	  130.3219	 2386.0000	    0.0000	UNKN	A4C2G1T1 (2.75)	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 124	 2589.9164	 2589.6359	    0.9994	   41.3322	 3895.3885	 6185.0000	    2.0000	MAIN	5OH-AAACAAAT-3p @349; 5OH-AAAACAAT-3p @225	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 125	 2605.6352	 2605.6352	    0.2768	    0.7083	   67.3321	 2278.0000	    1.0000	METH	5OH-AAAACGAT-3p @225	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 126	 2611.6177	 2611.6177	    0.8479	    4.1416	  370.1795	 2591.0000	    0.1610	NAAD	Sodium (Na) adduct of 2589.64	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 127	 2627.7162	 2627.6170	    0.6677	    2.4311	  212.5999	 2853.0000	    0.1000	NAAD	Sodium (Na) adduct of 2605.64	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 128	 2627.4121	 2627.7262	    0.1246	    0.3191	   28.8626	 2553.0000	    0.2000	K-AD	Potassium (K) adduct of 2589.64	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 129	 2629.7597	 2629.6605	    0.9976	   15.3604	 1291.7775	 3695.0000	    1.0000	MAIN	5OH-AAAAAAAT-3p @328	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 130	 2644.8092	 2643.7255	    0.4942	    1.4901	  121.4547	 2260.0000	    0.1000	K-AD	Potassium (K) adduct of 2605.64	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 131	 2652.7090	 2651.6423	    0.6487	    2.2817	  182.9978	 2342.0000	    0.0656	NAAD	Sodium (Na) adduct of 2629.66	
+Example	T Methyl (reverse)	B [Plate1 M20]	Missing peak 132		 2667.7508	    0.0000	    0.0000			    0.1000	K-AD	Potassium (K) adduct of 2629.66	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 133	 2803.6926	 2803.7869	    0.9606	    7.0898	  360.7419	 2501.0000	    0.0000	UNKN	C5G3T1 (2.96)	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 134	 2841.6419	 2841.3092	    0.9930	   11.0697	  569.1420	 2708.0000	    0.1000	UNKN	Doubly charged of 5681.61	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 135	 2849.3523	 2849.3088	    0.4336	    1.2610	   69.2372	 2215.0000	    0.1000	UNKN	Doubly charged of 5697.61	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 136	 2855.0417	 2855.2960	    0.9992	   17.1651	  906.7477	 3076.0000	    0.0000	UNKN	A4C3G1T1 (0.50)	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 137	 2857.0542	 2857.3085	    0.8392	    3.9985	  214.1535	 2761.0000	    0.1000	UNKN	Doubly charged of 5713.61	
+Example	T Methyl (reverse)	B [Plate1 M20]	Missing peak 138		 2865.3081	    0.0000	    0.0000			    0.1000	UNKN	Doubly charged of 5729.61	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 139	 2877.8578	 2877.6490	    0.8933	    4.8854	  287.3817	 2449.0000	    0.0000	UNKN	A6C2T1 (1.17)	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 140	 2893.0668	 2892.6572	    0.6114	    2.0627	  121.2900	 2271.0000	    0.1000	ACYC	5PPP-GGGAGAAG-3OH @0	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 141	 2918.8972	 2918.8456	    0.9995	   56.0432	 3281.7755	 5327.0000	    1.0000	MAIN	5OH-AAAACAAAT-3p @94	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 142	 2940.9209	 2940.8275	    0.9899	   10.1850	  565.7077	 2692.0000	    0.1078	NAAD	Sodium (Na) adduct of 2918.85	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 143	 2956.9359	 2956.9359	    0.6619	    2.3797	  129.3158	 2257.0000	    0.1000	K-AD	Potassium (K) adduct of 2918.85	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 144	 3032.6644	 3032.7322	    0.8767	    4.5616	  265.7074	 2376.0000	    0.0000	UNKN	C1G7T1 (1.89)	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 145	 3087.9355	 3087.9569	    0.9995	   73.8313	 4235.3943	 6331.0000	    1.0000	NOME/ANCH	5OH-AACCCCCAAT-3p @107	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 146	 3103.9081	 3103.9562	    0.0206	    0.0550	    2.9685	 2139.0000	    1.0000	METH	5OH-AACCCCCGAT-3p @107	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 147	 3109.8870	 3109.9387	    0.9800	    8.5780	  455.1682	 2548.0000	    0.1395	NAAD	Sodium (Na) adduct of 3087.96	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 148	 3127.9391	 3127.9815	    0.9995	   44.6232	 2623.2735	 4737.0000	    1.0000	NOME	5OH-ACCCCAAAAT-3p @270	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 149	 3143.8480	 3143.9809	    0.6147	    2.0966	  119.3103	 2230.0000	    1.0000	METH	5OH-ACCCCGAAAT-3p @270	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 150	 3149.8305	 3149.9634	    0.9431	    6.2678	  353.9555	 2451.0000	    0.0864	NAAD	Sodium (Na) adduct of 3127.98	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 151	 3167.9800	 3168.0062	    0.9995	   60.2922	 3686.7269	 5699.0000	    1.0000	MAIN/ANCH	5OH-AACACAAACT-3p @117	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 152	 3182.0125	 3182.0711	    0.5689	    1.8517	  108.1989	 2247.0000	    0.1000	K-AD	Potassium (K) adduct of 3143.98	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 153	 3182.5351	 3182.5937	    0.5661	    1.8374	  108.1989	 2271.0000	    0.0000	UNKN	A5C3G1T1 (1.41)	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 154	 3189.9294	 3189.9880	    0.9366	    6.0390	  390.7170	 2527.0000	    0.1173	NAAD	Sodium (Na) adduct of 3168.01	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 155	 3200.2191	 3200.2777	    0.9518	    6.6333	  420.3696	 2494.0000	    0.0000	UNKN	A4C3G2T1 (0.27)	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 156	 3206.0378	 3206.0964	    0.5806	    1.8957	  119.1151	 2215.0000	    0.1000	K-AD	Potassium (K) adduct of 3168.01	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 157	 3221.8651	 3221.9627	    0.8679	    4.4127	  264.8584	 2367.0000	    0.0000	UNKN	A6C2G1T1 (2.07), C10T1 (4.92)	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 158	 3230.4583	 3230.5558	    0.6364	    2.2068	  130.9497	 2223.0000	    0.1000	UNKN	Doubly charged of 6460.1	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 159	 3237.7687	 3237.8663	    0.6310	    2.1760	  126.1150	 2188.0000	    0.1000	ACYC	5PPP-GGGAGAAGG-3OH @0	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 160	 3457.0402	 3457.1913	    0.9996	   85.9032	 4191.1937	 6183.0000	    1.0000	NOME/ANCH	5OH-CACCAACAAAT-3p @37	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 161	 3473.4546	 3473.1906	    0.6356	    2.2119	  109.6089	 2154.0000	    1.0000	METH	5OH-CGCCGACGAAT-3p @37	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 162	 3479.4371	 3479.1731	    0.9878	    9.6686	  472.1818	 2503.0000	    0.1402	NAAD	Sodium (Na) adduct of 3457.19	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 163	 3488.9912	 3489.1899	    0.1765	    0.4306	   21.2402	 2063.0000	    1.0000	METH	5OH-CGCCGACGAAT-3p @37	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 164	 3497.0118	 3497.2159	    0.9994	   47.6705	 2247.1731	 4318.0000	    1.0000	NOME	5OH-AACCAACAAAT-3p @67	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 165	 3504.9851	 3505.1892	    0.8185	    3.7790	  177.0449	 2197.0000	    1.0000	METH	5OH-CGCCGACGAAT-3p @37	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 166	 3513.0111	 3513.2152	    0.7031	    2.6614	  120.1430	 2172.0000	    1.0000	METH	5OH-AACCAACGAAT-3p @67	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 167	 3518.9936	 3519.1977	    0.9243	    5.6512	  251.5867	 2260.0000	    0.0886	NAAD	Sodium (Na) adduct of 3497.22	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 168	 3526.9723	 3527.1710	    0.0549	    0.1314	    5.9341	 2054.0000	    0.1000	NAAD	Sodium (Na) adduct of 3505.19	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 169	 3527.0815	 3527.2802	    0.0549	    0.1314	    5.9341	 2054.0000	    0.1000	K-AD	Potassium (K) adduct of 3489.19	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 170	 3534.9983	 3535.1970	    0.3194	    0.8412	   38.8470	 2082.0000	    0.1000	NAAD	Sodium (Na) adduct of 3513.22	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 171	 3535.1075	 3535.3062	    0.0594	    0.1368	    6.2727	 2071.0000	    0.1000	K-AD	Potassium (K) adduct of 3497.22	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 172	 3543.0808	 3543.2795	    0.2316	    0.5783	   26.2057	 2204.0000	    0.1000	K-AD	Potassium (K) adduct of 3505.19	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 173	 3545.0663	 3545.5731	    0.9627	    7.1927	  317.5199	 2363.0000	    0.0000	UNKN	A4C3G3T1 (0.36), A1C10T1 (0.68)	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 174	 3550.7987	 3551.3055	    0.6958	    2.6026	  118.1906	 2161.0000	    0.1000	K-AD	Potassium (K) adduct of 3513.22	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 175	 3594.7108	 3594.9262	    0.7468	    2.9951	  155.4872	 2174.0000	    0.0000	UNKN	A8C1G1T1 (1.66), A1C3G6T1 (1.71)	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 176	 3631.5626	 3632.1870	    0.5450	    1.7227	   85.8979	 2139.0000	    0.0000	UNKN	A2C2G6T1 (1.05), A9G1T1 (1.10)	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 177	 3706.1683	 3706.3518	    0.9996	  116.1850	 5461.7667	 7338.0000	    1.0000	MAIN/ANCH	5OH-ACACCAACCACT-3p @12	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 178	 3728.2139	 3728.3336	    0.9957	   12.2532	  576.7471	 2538.0000	    0.1561	NAAD	Sodium (Na) adduct of 3706.35	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 179	 3746.0471	 3746.3764	    0.9995	   53.4728	 2580.2347	 4537.0000	    1.0000	NOME/ANCH	5OH-ACAACCCAAACT-3p @211	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 180	 3762.3757	 3762.3757	    0.4055	    1.1763	   58.2147	 2432.0000	    1.0000	METH	5OH-ACGACCCGAACT-3p @211	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 181	 3768.3582	 3768.3582	    0.9197	    5.6624	  283.0199	 2310.0000	    0.1000	NAAD	Sodium (Na) adduct of 3746.38	
+Example	T Methyl (reverse)	B [Plate1 M20]	Missing peak 182		 3778.3751	    0.0000	    0.0000			    1.0000	METH	5OH-ACGACCCGAACT-3p @211	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 183	 3786.7936	 3784.3576	    0.6403	    2.2419	  112.9431	 2205.0000	    0.1000	NAAD	Sodium (Na) adduct of 3762.38	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 184	 3786.9027	 3784.4667	    0.6403	    2.2419	  112.9431	 2205.0000	    0.0872	K-AD	Potassium (K) adduct of 3746.38	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 185	 3799.4871	 3800.3569	    0.4221	    1.1980	   60.5476	 2114.0000	    0.1000	NAAD	Sodium (Na) adduct of 3778.38	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 186	 3799.5962	 3800.4660	    0.4221	    1.1980	   60.5476	 2114.0000	    0.1000	K-AD	Potassium (K) adduct of 3762.38	
+Example	T Methyl (reverse)	B [Plate1 M20]	Missing peak 187		 3816.4653	    0.0000	    0.0000			    0.1000	K-AD	Potassium (K) adduct of 3778.38	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 188	 3870.5239	 3870.5403	    0.6694	    2.4159	  105.6587	 2094.0000	    0.0000	UNKN	A5C3G3T1 (3.88), A9C2T1 (4.09), A2C4G5T1 (4.14), A2C10T1 (4.92)	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 189	 3893.3733	 3893.0126	    0.8808	    4.6474	  198.2025	 2189.0000	    0.0000	UNKN	A1C10G1T1 (1.55), A4C3G4T1 (2.59)	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 190	 3912.8803	 3913.2001	    0.9995	   65.6749	 2762.2164	 4767.0000	    1.0000	MAIN/ANCH	5PPP-GGGAGAAGGCT-3p @0	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 191	 3934.8316	 3935.1820	    0.9977	   14.3215	  622.4711	 2597.0000	    0.1055	NAAD	Sodium (Na) adduct of 3913.2	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 192	 3951.8280	 3951.2904	    0.8049	    3.5668	  155.5466	 2132.0000	    0.1264	K-AD	Potassium (K) adduct of 3913.2	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 193	 3982.1290	 3982.1844	    0.9992	   18.5082	  841.6495	 2787.0000	    0.0000	UNKN	A9G2T1 (3.69), A2C2G7T1 (3.74), A5C1G5T1 (4.29)	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 194	 4075.2719	 4075.5862	    0.9996	   70.5295	 3111.7610	 5085.0000	    1.0000	MAIN/ANCH	5OH-ACACCCAAAAACT-3p @129	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 195	 4097.9012	 4097.5680	    0.9740	    8.0263	  355.3275	 2306.0000	    0.1231	NAAD	Sodium (Na) adduct of 4075.59	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 196	 4114.0097	 4113.6765	    0.8648	    4.3878	  193.9222	 2160.0000	    0.1000	K-AD	Potassium (K) adduct of 4075.59	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 197	 4561.3433	 4561.5348	    0.9707	    7.7523	  212.5322	 2013.0000	    0.0000	UNKN	A5C3G5T1 (3.31), A12C1T1 (3.36), A2C10G2T1 (4.35), A9C2G2T1 (4.67), A2C4G7T1 (4.72)	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 198	 5681.1570	 5681.6103	    0.9995	   94.2774	 2406.1877	 4035.0000	    1.0000	NOME/ANCH	5OH-CACAAAAACAAACCACAT-3p @49	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 199	 5697.1563	 5697.6096	    0.9677	    7.7010	  192.0994	 1838.0000	    1.0000	METH	5OH-CGCGAAAACAAACCGCAT-3p @49	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 200	 5703.1388	 5703.5921	    0.9943	   11.6970	  305.0078	 1911.0000	    0.1856	NAAD	Sodium (Na) adduct of 5681.61	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 201	 5713.1592	 5713.6089	    0.3020	    0.7989	   20.1405	 1650.0000	    1.0000	METH	5OH-CGCGAAAACAAACCGCAT-3p @49	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 202	 5717.4904	 5717.9401	    0.1999	    0.4990	   12.5661	 1786.0000	    0.0000	UNKN	A1C2G13T1 (2.55), A8G8T1 (2.60), A5C7G5T1 (3.64), A12C5T1 (3.69), A9C6G2T1 (4.33), A2C8G7T1 (4.38), A2C14G2T1 (4.68)	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 203	 5719.1417	 5719.5915	    0.2000	    0.4987	   12.5661	 1787.0000	    0.1000	NAAD	Sodium (Na) adduct of 5697.61	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 204	 5719.2473	 5719.7006	    0.9498	    6.6072	  171.6521	 1787.0000	    0.1000	K-AD	Potassium (K) adduct of 5681.61	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 205	 5729.1585	 5729.6083	    0.4185	    1.1890	   30.0879	 1641.0000	    1.0000	METH	5OH-CGCGAAAACAAACCGCAT-3p @49	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 206	 5735.1374	 5735.5908	    0.5767	    1.8834	   50.1282	 1706.0000	    0.1000	NAAD	Sodium (Na) adduct of 5713.61	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 207	 5735.2466	 5735.6999	    0.5767	    1.8834	   50.1282	 1706.0000	    0.1000	K-AD	Potassium (K) adduct of 5697.61	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 208	 5751.1403	 5751.5901	    0.1781	    0.4448	   11.2289	 1608.0000	    0.1000	NAAD	Sodium (Na) adduct of 5729.61	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 209	 5751.2495	 5751.6992	    0.1781	    0.4448	   11.2289	 1608.0000	    0.1000	K-AD	Potassium (K) adduct of 5713.61	
+Example	T Methyl (reverse)	B [Plate1 M20]	Missing peak 210		 5767.6985	    0.0000	    0.0000			    0.1000	K-AD	Potassium (K) adduct of 5729.61	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 211	 6460.4797	 6460.1037	    0.9994	   22.7307	  425.8337	 1947.0000	    1.0000	MAIN/ANCH	5OH-ACAAACAAAAAAAAACAAAT-3p @308	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 212	 6482.4616	 6482.0855	    0.8072	    3.6178	   64.0824	 1582.0000	    0.1000	NAAD	Sodium (Na) adduct of 6460.1	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 213	 6498.5702	 6498.1940	    0.1961	    0.4812	    9.2194	 1508.0000	    0.1000	K-AD	Potassium (K) adduct of 6460.1	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 214	 6624.7643	 6624.9092	    0.8754	    4.5582	   88.6936	 1581.0000	    0.0000	UNKN	C17G4T1 (2.73), A2C4G13T1 (3.16), A9C2G8T1 (3.21), A16G3T1 (3.27), A10C8G2T1 (3.72), A3C10G7T1 (3.77), A6C9G5T1 (4.25), A13C7T1 (4.31), A13C1G5T1 (4.76), A6C3G10T1 (4.81)	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 215	 6790.6055	 6790.8229	    0.8912	    4.8481	  136.9898	 1619.0000	    0.0000	UNKN	A7C12G2T1 (0.52), C14G7T1 (0.58), A17C3T1 (1.51), A10C5G5T1 (1.56), A3C7G10T1 (1.61), A6G13T1 (2.65)	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 216	 6843.1079	 6843.0832	    0.9988	   20.5197	  566.3480	 2049.0000	    0.0000	NEW 	A3C6G11T1 (2.15), A10C4G6T1 (2.20), A17C2G1T1 (2.25), C13G8T1 (3.19), A7C11G3T1 (3.24), A1C19G2T1 (3.75), A4C18T1 (4.28), A11C10T1 (4.73), A4C12G5T1 (4.78)	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 217	 6913.0926	 6913.0138	    0.8253	    3.8092	   99.7048	 1592.0000	    0.0000	UNKN	C18G4T1 (1.65), A10C9G2T1 (2.64), A3C11G7T1 (2.69), A20T1 (3.63), A13C2G5T1 (3.68), A6C4G10T1 (3.73), A2C5G13T1 (4.24), A9C3G8T1 (4.29), A16C1G3T1 (4.35)	
+Example	T Methyl (reverse)	B [Plate1 M20]	Peak 218	 6938.2794	 6938.2006	    0.8432	    4.0431	  103.5953	 1596.0000	    0.0000	UNKN	A2C17G3T1 (2.81), A4C4G12T1 (3.08), A11C2G7T1 (3.13), A18G2T1 (3.19), A12C8G1T1 (3.80), A5C10G6T1 (3.85), A1C11G9T1 (4.12), A8C9G4T1 (4.17), A15C1G4T1 (4.84), A8C3G9T1 (4.89), A1C5G14T1 (4.95)	
