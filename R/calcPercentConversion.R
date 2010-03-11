@@ -3,6 +3,8 @@ calcPercentAdduct <- function(peaks) {
 	## IDENTIFY ADDUCTS AND THEIR MATCHING REFERENCE PEAKS
 	adduct.peaks <- which((unlist(lapply(peaks, slot, "adduct")) != "") & (lapply(sequences, length) == 1))
 	adduct.peaks <- unique(unlist(lapply(peaks[adduct.peaks], slot, "sequence")))
+	if (length(adduct.peaks) < 1) { return(numeric(0)) }
+	
 	## IDENTIFY MATCHING REFERENCE PEAKS
 	adduct.ratios <- unlist(lapply(adduct.peaks,
 		function (adduct) {
@@ -33,7 +35,7 @@ calcPercentConversion <- function(fragments, peaks) {
 }
 
 
-calcMeth <- function(peaks, peaklist, method=c("weighted", "proportion"), num.cg.fragments=rep(1, length(peaks))) {
+calcMeth <- function(peaks, peaklist, method=c("weighted", "proportion"), num.cg.fragments=rep(1, length(peaks)), non.cg.fragments=rep(0, length(peaks))) {
 	method <- match.arg(method)
 	peaks <- peaks[order(peaks)]
 	which.peaks.matched <- findPeaks(peaks, unlist(lapply(peaklist, slot, "MW.actual")))
@@ -45,16 +47,19 @@ calcMeth <- function(peaks, peaklist, method=c("weighted", "proportion"), num.cg
 	N <- length(peaks)
 	## CALCULATE NET PEAK INTENSITY FOR ALL FRAGMENTS BEING MEASURED
 	SNR.sum <- sum(unlist(lapply(peaklist[which.peaks.matched], slot, "SNR")), na.rm=TRUE)
+	num.peaks <- max(1, sum(non.cg.fragments) + max(num.cg.fragments))
 	for (i in 1:N) {
 		SNR.i <- peaklist[[which.peaks.matched[i]]]$SNR
 		## HOW MANY FRAGMENTS DETERMINE THE SIGNAL FOR THIS PEAK?
-		num.fragments <- max(1, peaklist[[which.peaks.matched[i]]]$components)
+#		num.fragments <- max(1, peaklist[[which.peaks.matched[i]]]$components)
 		## SCALE SNR DATA TO ACCOUNT FOR PEAK COLLISIONS WITH CpG-CONTAINING AND/OR OTHER FRAGMENTS
 		## NOTE: THE FOLLOWING SCALING ASSUMES THAT TOTAL PEAK INTENSITY IS THE SAME FOR ALL FRAGMENTS
 		## NOTE: THE FORMULA REPRESENTS THE ALREADY SIMPLIFIED SOLUTION OF MULTIPLE LINEAR EQUATIONS
 		## NOTE: EX... SNR1=A1+B1; SNR2=A2; A1+A2=Anet=Bnet=B1
-		## NOTE: FOR NOW, THIS IS SUFFICIENT... BUT MAY EXTEND IN FUTURE TO ACCOUNT FOR ADD'L FRAGMENT DEGENERACY (WILL REQUIRE RECURSIVE FUNCTIONS)
-		SNR.i <- SNR.i - SNR.sum * (num.fragments - num.cg.fragments[i]) / num.fragments
+		## NOTE: FOR NOW, THIS IS SUFFICIENT... BUT MAY EXTEND IN FUTURE TO ACCOUNT FOR ADDL FRAGMENT DEGENERACY (WILL REQUIRE RECURSIVE FUNCTIONS)
+#		SNR.i <- SNR.i - SNR.sum * (num.fragments - num.cg.fragments[i]) / num.fragments
+		## ADJUST SNR CALCULATION TO REMOVE CONTRIBUTIONS FROM NON-CpG PEAKS
+		SNR.i <- SNR.i - SNR.sum * non.cg.fragments[i] / num.peaks
 		## IF OTHER PEAKS OVERLAPPING => REMOVE FRACTION FROM CONSIDERATION!!!
 		if (is.na(SNR.i)) next
 		denominator <- denominator + SNR.i
@@ -90,7 +95,15 @@ analyzeCpGs <- function(fragments, peaks, method=c("weighted", "proportion")) {
 					& !(unlist(lapply(fragments[x], slot, "conversion.control"))))) + 1)
 			}
 		))
-		CpG.data[i] <- calcMeth(fragments[[CpG.fragment.map[i]]]$MW, peaks, method, cg.collision.counts)
+		## COUNT NUMBER OF THESE THAT DO NOT CONTAIN CpGs
+		non.cg.collision.counts <- unlist(lapply(collisions.i,
+			function(x) {
+				if (is.null(x) | identical(x, integer(0))) return(1)
+				return(length(which((unlist(lapply(fragments[x], slot, "CpGs")) < 1)
+					& !(unlist(lapply(fragments[x], slot, "conversion.control"))))))
+			}
+		))
+		CpG.data[i] <- calcMeth(fragments[[CpG.fragment.map[i]]]$MW, peaks, method, cg.collision.counts, non.cg.collision.counts)
 	}
 	return(CpG.data)
 }
