@@ -21,7 +21,7 @@ numCollisions <- function (peaks, resolution=0.5) {
 
 findPeaks <- function (MW, peaks, resolution=1) {
 	peaks.found <- c()
-	if (length(MW) < 1) return()
+	if ((length(MW) < 1) | (length(peaks) < 1)) return()
 	for (i in 1:length(MW)) {
 		peak.i <- which(abs(peaks - MW[i]) < resolution)
 		if (length(peak.i) < 1) peak.i <- NA
@@ -32,8 +32,12 @@ findPeaks <- function (MW, peaks, resolution=1) {
 
 findFragments <- function (MW, fragments, resolution=1) {
 	if (length(MW) < 1) return()
-	peaks <- relist(!is.na(findPeaks(MW, unlist(lapply(fragments, slot, "MW")), resolution)), lapply(fragments, slot, "MW"))
-	fragments.found <- which(unlist(lapply(peaks, all)))
+	MWs <- lapply(fragments, slot, "MW")
+	MW.matches <- rep(NA, length(unlist(MWs)))
+	if (length(MW.matches) < 1) return()
+	MW.matches[findPeaks(MW, unlist(MWs), resolution)] <- 1
+	MW.matches <- relist(!is.na(MW.matches), MWs)
+	fragments.found <- which(unlist(lapply(MW.matches, any)))
 	if (length(fragments.found) < 1) return()
 	return(fragments[fragments.found])
 }

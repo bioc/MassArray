@@ -10,6 +10,7 @@
 \usepackage{hyperref}
 \usepackage[authoryear,round]{natbib}
 \usepackage{float}
+\usepackage{lscape}
 
 \textwidth=6.2in
 \textheight=8.5in
@@ -106,7 +107,8 @@ between more than one CG-containing fragment.  These overlaps reduce the ability
 the user to this situation.  All CG sites or fragments marked in red contain some form of molecular weight overlap with one or more other fragments.  CG sites that are linked by 
 gray arrows indicate fragments that have molecular weight overlap(s) with other CG-containing fragments.  Methylation status at these labeled sites cannot be measured independently 
 from the methylation status of overlapping CG dinucleotides using the indicated reaction/strand combination(s).  A simple example of such an assay is shown below.
-\newpage
+
+\begin{landscape}
 \begin{figure}[H]
 \begin{center}
 <<label=fig3,fig=TRUE,echo=TRUE,results=hide>>=
@@ -116,6 +118,7 @@ ampliconPrediction("AAAATTTTCCCCTCTGCGTGAGAGAGTTGTC(CG)ACTTCCCCTCTGCGTGAGAGAGTTG
 \caption{Basic amplicon prediction for a short sequence containing four CG sites with some molecular weight overlaps. Putative fragmentation patterns are shown for T and C-cleavage reactions on both the plus and minus strands for the specified sequence. CG dinucleotides (filled circles) are numbered and color-coded according to their ability to be assayed, where gray indicates that the CG is located on a fragment whose molecular weight is outside the usable mass window, red indicates a molecular weight overlap with another fragment, and blue indicates a uniquely assayable site. Linked arrowheads denote molecular weight overlaps between multiple CG-containing fragments. Yellow highlights represent tagged/primer sequences, while lavender highlights denote user-specified "required" sites. }
 \label{fig:three}
 \end{figure}
+\end{landscape}
 
 \newpage
 \section{Conversion Controls}
@@ -141,10 +144,10 @@ wherever they meet the following criteria:
 \end{enumerate}
 
 
-
-\newpage
 Here is an example of usable conversion controls identified in a given amplicon.  Three reactions contain measureable conversion controls (labeled in green), however, one reaction lacks 
 usable conversion controls as shown.
+
+\begin{landscape}
 \begin{figure}[H]
 \begin{center}
 <<label=fig4,fig=TRUE,echo=FALSE,results=hide>>=
@@ -154,6 +157,7 @@ ampliconPrediction("CCTGTCCAGGGGCACTCCATATTTTCCTACCTGTCCCTCTTTGCTTGTAAAAACAAATTA
 \caption{Basic amplicon prediction for a short sequence showing the identification of usable conversion controls. Putative fragmentation patterns are shown for T and C-cleavage reactions on both the plus and minus strands for the specified sequence. CG dinucleotides (filled circles) are numbered and color-coded according to their ability to be assayed, where gray indicates that the CG is located on a fragment whose molecular weight is outside the usable mass window, red indicates a molecular weight overlap with another fragment, and blue indicates a uniquely assayable site. Fragmentation patterns are shown in corresponding colors, with the addition of green fragments indicating usable conversion controls.  Yellow highlights represent tagged/primer sequences. }
 \label{fig:four}
 \end{figure}
+\end{landscape}
 
 \newpage
 Those fragments meeting the above criteria are flagged appropriately and are treated as if they contained a CG, thus enabling the 
@@ -183,7 +187,15 @@ Once data has been properly exported, it may be loaded into an open R workspace.
 setwd(data.path)
 @
 <<echo=TRUE>>=
-sequence <- "CCAGGTCCAAAGGTTCAGACCAGTCTGAA>CCTGTCCAGGGGCACTCCATATTTTCCTACCTGTCCCTCTTTGCTTGTAAAAACAAATTAAACAGGGATCCCAGCAACTTCGGGGCATGTGTGTAACTGTGCAAGGAGCGCGAAGCCCAGAGCATCGCCCTAGAGTTCGGGCCGCAGCTGCAGAGGCACATCTGGAAAAGGGGGAGGGGTCGAAGCGGAGGGGACAAGAAGCCCCCAAACGACTAGCTTCTGGGTGCAGAGTCTGTGTCAC(CG)GGGGTTAGTTACCTGTCCTACGTTGATGAATCCGTACTTGCTGGCTATGCGGTCTGCCTCCGCGAATCCGC(CG)GC<GATCTTCACTGCCCAGTGGTTGGTGTA"
+sequence <- "CCAGGTCCAAAGGTTCAGACCAGTCTGAA>CCTGTCCAGGGGCACTCCATATTTTCC"
+sequence <- paste(sequence, "TACCTGTCCCTCTTTGCTTGTAAAAACAAATTAAACAGGGA", sep="")
+sequence <- paste(sequence, "TCCCAGCAACTTCGGGGCATGTGTGTAACTGTGCAAGGAGC", sep="")
+sequence <- paste(sequence, "GCGAAGCCCAGAGCATCGCCCTAGAGTTCGGGCCGCAGCTG", sep="")
+sequence <- paste(sequence, "CAGAGGCACATCTGGAAAAGGGGGAGGGGTCGAAGCGGAGG", sep="")
+sequence <- paste(sequence, "GGACAAGAAGCCCCCAAACGACTAGCTTCTGGGTGCAGAGT", sep="")
+sequence <- paste(sequence, "CTGTGTCAC(CG)GGGGTTAGTTACCTGTCCTACGTTGATG", sep="")
+sequence <- paste(sequence, "AATCCGTACTTGCTGGCTATGCGGTCTGCCTCCGCGAATCC", sep="")
+sequence <- paste(sequence, "GC(CG)GC<GATCTTCACTGCCCAGTGGTTGGTGTA", sep="")
 data <- new("MassArrayData", sequence, file="Example.txt")
 @
 <<echo=FALSE,results=hide>>=
