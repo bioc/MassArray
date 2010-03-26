@@ -110,7 +110,12 @@ importEpiTyperData <- function (data, MassArrayObject, verbose=TRUE) {
 			peaks.expected <- unique(unlist(peaks.expected))
 			peaks.observed <- unlist(unique(lapply(peaks, slot, "MW.actual")))
 			peaks.found <- findPeaks(peaks.expected, peaks.observed, resolution=1)
-			control.peaks.missing <- which(is.na(peaks.found))
+			if (is.null(peaks.found)) {
+				control.peaks.missing <- NULL
+			}
+			else {
+				control.peaks.missing <- which(is.na(peaks.found))
+			}
 			if (length(control.peaks.missing) > 0) {
 				for (k in 1:length(control.peaks.missing)) {
 					peaks <- c(peaks, new("MassArrayPeak", ID=j+k,

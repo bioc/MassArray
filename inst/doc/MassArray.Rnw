@@ -150,7 +150,7 @@ usable conversion controls as shown.
 \begin{landscape}
 \begin{figure}[H]
 \begin{center}
-<<label=fig4,fig=TRUE,echo=FALSE,results=hide>>=
+<<label=fig4,fig=TRUE,echo=TRUE,results=hide>>=
 ampliconPrediction("CCTGTCCAGGGGCACTCCATATTTTCCTACCTGTCCCTCTTTGCTTGTAAAAACAAATTAAACAGGGATCCCAGCAACTTCG")
 @
 \end{center}

@@ -6,15 +6,16 @@
   Function to calculate percent methylation from a collection of peaks corresponding to a single fragment.
 }
 \usage{
-calcMeth(peaks, peaklist, method = c("weighted", "proportion"), num.cg.fragments = rep(1, length(peaks)), non.cg.fragments = rep(0, length(peaks)))
+calcMeth(SNR.list, method = c("weighted", "proportion"), fragments = rep(1, length(SNR.list)), non.cg.fragments = numeric(0), prune.non.cg.peaks = TRUE, na.rm = FALSE)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{peaks}{ List of molecular weights, sorted from low to high, corresponding to the unmethylated and methylated peaks for a given fragment, respectively }
-  \item{peaklist}{ List of MassArrayPeak objects comprising spectral data for a complete assay}
+  \item{SNR.list}{ List of signal-to-noise ratios, sorted from low to high MWs, corresponding to the unmethylated and methylated peaks for a given set of fragments }
   \item{method}{ Specifies which algorithm to use when calculating percent methylation (either \code{"weighted"} or \code{"proportion"}) }
-  \item{num.cg.fragments}{ Number of CG-containing fragments contributing to each of the input peaks, automatically defaulting to \code{1} }
-  \item{non.cg.fragments}{ Number of fragments (without CGs) contributing to each of the input peaks, automatically defaulting to \code{0} }
+  \item{fragments}{ List of all fragments contributing to each of the input peaks, automatically defaulting to a single fragment }
+  \item{non.cg.fragments}{ List of fragments (without CGs) contributing to any of the input peaks, automatically defaulting to \code{numeric(0)} }
+  \item{prune.non.cg.peaks}{ Boolean value determining whether or not to remove non-CG-containing fragments prior to analysis or whether to include them in the calculating model (note that setting this option to \code{FALSE} could result in a considerable increase in analytical time); option automatically defaults to \code{TRUE} }
+  \item{na.rm}{ Boolean value determing whether or not to return an error on input of any unspecified data (\code{NA}), automatically defaulting to \code{FALSE} } 
 }
 \details{
   Note that the current release of this function performs as expected for the large majority of cases.  However, certain complex combinations of peak overlaps are not handled at this time.  
@@ -28,8 +29,11 @@ calcMeth(peaks, peaklist, method = c("weighted", "proportion"), num.cg.fragments
 \examples{
 data(MassArray.example.data)
 frags <- MassArray.example.data$fragments.T[[6]]$"MW"
-calcMeth(frags, MassArray.example.data$samples[[1]]$peaks, "weighted")
-calcMeth(frags, MassArray.example.data$samples[[1]]$peaks, "proportion")
+peaks <- findPeaks(frags, unlist(lapply(MassArray.example.data$samples[[1]]$peaks, slot, "MW.actual")))
+SNRs <- unlist(lapply(MassArray.example.data$samples[[1]]$peaks[peaks], slot, "SNR"))
+frag.list <- list(1:3, 1:3, 1:3, 1:3)
+calcMeth(SNRs, method="weighted", fragments=frag.list)
+calcMeth(SNRs, method="proportion", fragments=frag.list)
 }
 \seealso{ See Also \code{\linkS4class{MassArrayPeak}} }
 % Add one or more standard keywords, see file 'KEYWORDS' in the

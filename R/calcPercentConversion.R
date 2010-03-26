@@ -29,47 +29,227 @@ calcPercentConversion <- function(fragments, peaks) {
 	controls <- which(unlist(lapply(fragments, slot, "conversion.control")))
 	controls.meth <- c()
 	for (i in controls) {
-		controls.meth <- c(controls.meth, calcMeth(fragments[[i]]$MW, peaks))
+		frags.i <- fragments[[i]]$"MW"
+		peaks.i <- findPeaks(frags.i, unlist(lapply(peaks, slot, "MW.actual")))
+		SNRs.i <- unlist(lapply(peaks[peaks.i], slot, "SNR"))
+## MAP ALL COLLIDING FRAGMENTS TO LIST OF MOLECULAR WEIGHTS
+		collisions.i <- lapply(frags.i, 
+							   function(x) {
+							   temp <- findFragments(x, fragments)
+							   IDs <- unlist(lapply(temp, slot, "ID"))
+							   return(unique(IDs))
+							   }
+							   )
+## IDENTIFY WHICH FRAGMENTS ARE NON-CONTRIBUTORY TO METHYLATION STATE (E.G. NON-CG-CONTAINING FRAGMENTS)
+		non.cg.fragments <- setdiff(unlist(collisions.i), i)		
+		controls.meth <- c(controls.meth, calcMeth(SNRs.i, fragments=collisions.i, non.cg.fragments=non.cg.fragments))
 	}
 	return(as.numeric(controls.meth))
 }
 
 
-calcMeth <- function(peaks, peaklist, method=c("weighted", "proportion"), num.cg.fragments=rep(1, length(peaks)), non.cg.fragments=rep(0, length(peaks))) {
+calcMeth <- function(SNR.list, method=c("weighted", "proportion"), fragments=rep(1, length(SNR.list)), non.cg.fragments=numeric(0), prune.non.cg.peaks=TRUE, na.rm=FALSE) {
+## HANDLE INPUTS TO ENSURE IMPORTANT ASSUMPTIONS (E.G. SNR.LIST REPRESENTS NUMERICAL INPUT)
 	method <- match.arg(method)
-	peaks <- peaks[order(peaks)]
-	which.peaks.matched <- findPeaks(peaks, unlist(lapply(peaklist, slot, "MW.actual")))
-	which.peaks.matched.theory <- findPeaks(peaks, unlist(lapply(peaklist, slot, "MW.theoretical")))
-	which.peaks.matched[which(is.na(which.peaks.matched))] <- which.peaks.matched.theory[which(is.na(which.peaks.matched))]
-	numerator <- 0
-	denominator <- 0
-	if (any(is.na(which.peaks.matched))) return(NA)
-	N <- length(peaks)
-	## CALCULATE NET PEAK INTENSITY FOR ALL FRAGMENTS BEING MEASURED
-	SNR.sum <- sum(unlist(lapply(peaklist[which.peaks.matched], slot, "SNR")), na.rm=TRUE)
-	num.peaks <- max(1, sum(non.cg.fragments) + max(num.cg.fragments))
-	for (i in 1:N) {
-		SNR.i <- peaklist[[which.peaks.matched[i]]]$SNR
-		## HOW MANY FRAGMENTS DETERMINE THE SIGNAL FOR THIS PEAK?
-#		num.fragments <- max(1, peaklist[[which.peaks.matched[i]]]$components)
-		## SCALE SNR DATA TO ACCOUNT FOR PEAK COLLISIONS WITH CpG-CONTAINING AND/OR OTHER FRAGMENTS
-		## NOTE: THE FOLLOWING SCALING ASSUMES THAT TOTAL PEAK INTENSITY IS THE SAME FOR ALL FRAGMENTS
-		## NOTE: THE FORMULA REPRESENTS THE ALREADY SIMPLIFIED SOLUTION OF MULTIPLE LINEAR EQUATIONS
-		## NOTE: EX... SNR1=A1+B1; SNR2=A2; A1+A2=Anet=Bnet=B1
-		## NOTE: FOR NOW, THIS IS SUFFICIENT... BUT MAY EXTEND IN FUTURE TO ACCOUNT FOR ADDL FRAGMENT DEGENERACY (WILL REQUIRE RECURSIVE FUNCTIONS)
-#		SNR.i <- SNR.i - SNR.sum * (num.fragments - num.cg.fragments[i]) / num.fragments
-		## ADJUST SNR CALCULATION TO REMOVE CONTRIBUTIONS FROM NON-CpG PEAKS
-		SNR.i <- SNR.i - SNR.sum * non.cg.fragments[i] / num.peaks
-		## IF OTHER PEAKS OVERLAPPING => REMOVE FRACTION FROM CONSIDERATION!!!
-		if (is.na(SNR.i)) next
-		denominator <- denominator + SNR.i
-		switch(method,
-			"weighted" = numerator <- numerator + (i - 1) * SNR.i / (N - 1),
-			"proportion" = numerator <- numerator + min(1, i - 1) * SNR.i
-		)
+	SNR.list <- as.numeric(SNR.list)
+	num.SNRs <- length(SNR.list)
+	non.cg.fragments <- unique(non.cg.fragments)
+	if (num.SNRs != length(fragments)) {
+		warning("lengths of input SNR.list and fragments do not match")
+		return(NA)
 	}
-	if (denominator <= 0) return(NA)
-	return(min(1, numerator / denominator))
+	if (num.SNRs < 1) {
+		warning("SNR.list input must contain at least one value")
+		return(NA)
+	}
+## REMOVE NAs FROM INPUT SNR LIST
+	if (any(is.na(SNR.list))) {
+		if (!na.rm) return(NA)
+		if (all(is.na(SNR.list))) return(NA)
+		SNR.list[which(is.na(SNR.list))] <- 0
+	}
+## CALCULATE AVERAGE SNR PER CONTRIBUTING FRAGMENT
+	num.fragments <- length(unique(unlist(fragments)))
+	SNR.avg <- sum(SNR.list) / num.fragments
+## REMOVE NON-CG PEAKS FROM INPUT DATASET VIA ASSUMPTION OF EQUIVALENT AVERAGE PEAK HEIGHTS
+	if (prune.non.cg.peaks) {
+		for (i in non.cg.fragments) {
+			temp <- which(unlist(lapply(lapply(fragments, "%in%", i), any)))
+			SNR.list[temp] <- max(SNR.list[temp]-SNR.avg, 0)
+		}
+		fragments <- lapply(fragments, setdiff, non.cg.fragments)
+		num.fragments <- length(unique(unlist(fragments)))
+		non.cg.fragments <- numeric(0)
+	}
+	cgs <- unique(unlist(fragments))
+	if (num.fragments < 1) {
+		return(NA)	
+	}
+## SETUP SYSTEM OF LINEAR EQUATIONS
+	N <- num.SNRs * num.fragments
+	linear.eqs <- matrix(0, nr=0, nc=N)
+	solutions <- numeric(0)
+## RULE ONE: TOTAL PROPORTIONAL CONTRIBUTIONS FROM EACH CG MUST TOTAL TO 1
+	temp <- matrix(0, nr=num.SNRs, nc=N)
+	for (i in 1:num.SNRs) {
+		cgs.i <- fragments[[i]]	
+		index.i <- match(cgs.i, cgs)
+		temp[i, (index.i - 1)*num.SNRs + i] <- 1
+	}
+	linear.eqs <- rbind(linear.eqs, temp)
+	solutions <- c(solutions, rep(1, num.SNRs))
+## RULE TWO: CGs THAT DO NOT CONTRIBUTE TO A PEAK MUST BE ASSIGNED A COEFFICIENT OF ZERO FOR THAT PEAK
+	for (i in 1:num.SNRs) {
+		cgs.i <- fragments[[i]]
+		missing <- which(!(cgs %in% cgs.i))
+		num.missing <- length(missing)
+		if (num.missing < 1) next
+		temp <- matrix(0, nr=num.missing, nc=N)
+		for (j in 1:num.missing) {
+			temp[j, (missing[j] - 1)*num.SNRs + i] <- 1
+		}
+		linear.eqs <- rbind(linear.eqs, temp)
+		solutions <- c(solutions, rep(0, num.missing))
+	}
+## RULE THREE: METHYLATION STATE IS EQUIVALENT FOR TWO (OR MORE) CGs THAT HAVE IDENTICAL PEAK DISTRIBUTIONS
+	cg.list <- list()
+	for (i in 1:num.fragments) {
+		cg.list[[i]] <- which(unlist(lapply(lapply(fragments, match, cgs[i]), any)))
+	}
+	for (i in which(duplicated(cg.list))) {
+		dup.cgs <- which(unlist(lapply(cg.list, identical, cg.list[[i]])))
+		dup.cgs <- setdiff(dup.cgs, i)[1]
+		temp <- matrix(0, nr=num.SNRs, nc=N)
+		for (j in 1:num.SNRs) {
+			temp[j, (i - 1)*num.SNRs + j] <- -1
+			temp[j, (dup.cgs - 1)*num.SNRs + j] <- 1
+		}
+		solutions <- c(solutions, rep(0, num.SNRs))
+		linear.eqs <- rbind(linear.eqs, temp)
+	}
+	
+## SOLVE SYSTEM OF LINEAR EQUATIONS
+	qr.coefs <- qr.coef(qr(linear.eqs), solutions)
+## IF SYSTEM OF EQUATIONS IS INCOMPLETE, DETERMINE IDEAL VALUES FOR REMAINING COEFFICIENTS BY RANDOM-VALUE OPTIMIZATION
+	if (any(is.na(qr.coefs))) {
+		na.coefs <- which(is.na(qr.coefs))
+		temp <- matrix(0, nr=length(na.coefs), nc=N)
+		for (i in 1:length(na.coefs)) {
+			temp[i, na.coefs[i]] <- 1
+		}
+		linear.eqs <- rbind(linear.eqs, temp)
+		qr.eqs <- qr(linear.eqs)
+		
+################################################################################################
+## DEFINE OPTIMIZATION FUNCTION FOR SITUATIONS WHERE SYSTEM OF LINEAR EQUATIONS IS INSUFFICIENT
+################################################################################################
+##
+		optimizeCoefficients <- function(coefs=rep(0.5, length(na.coefs)), range=(-500000:500000)/1000000, score.best=Inf, tol=1e-4) {
+# DEFINE OPTIMIZATION FUNCTION
+			opt.eval <- matrix(0, nr=num.fragments, nc=N)
+			for (i in 1:num.fragments) {
+				opt.eval[i, (i-1)*num.SNRs + 1:num.SNRs] <- SNR.list
+			}
+			results <- matrix(NA, nr=length(coefs)+1, nc=length(coefs))
+			scores <- rep(NA, length(coefs)+1)
+			for (i in 1:(length(coefs)+1)) {
+				repeat {
+					count <- 100
+# IDENTIFY A SET OF COEFFICIENTS THAT SATISFY CRITERIA AS BELOW
+					repeat {
+						repeat {
+# GENERATE RANDOM COEFFICIENTS BY RANDOM-WALK ALGORITHM
+							rand <- coefs + sample(range*count/100, size=length(coefs))
+# ENSURE THAT STAY WITHIN BOUNDARY LIMITS FOR A COEFFICIENT (0<=X<=1)
+							if (all(rand >= 0 & rand <= 1)) break
+						}
+						temp <- c(solutions, rand)
+						temp.coefs <- qr.coef(qr.eqs, temp)
+# ENSURE THAT STAY WITHIN BOUNDARY LIMITS FOR A COEFFICIENT (0<=X<=1)
+						if (any(temp.coefs < 0 & temp.coefs > 1)) next
+						score <- sum(abs(rowSums(t(t(opt.eval)*temp.coefs))-SNR.avg))
+						if (is.na(score)) next
+						if (count <= 0) {
+							rand <- coefs
+							score <- score.best	
+						}
+						if (score <= score.best) break
+						count <- count-1
+					}
+					if ((max(abs(range)) < tol | abs(score.best - score) < tol) & count<=90) break
+					if (max(abs(range)) > tol & (score == score.best)) break
+					coefs <- rand
+					range <- range * min(0.9, max(0.5, score/score.best, na.rm=TRUE))
+					score.best <- score
+					if (max(abs(range)) < tol) range <- range / tol
+				}			
+				results[i, ] <- coefs
+				coefs <- rep(0.5, length(coefs))
+				scores[i] <- score.best
+				score.best <- Inf
+				range <- (-500000:500000)/1000000
+			}
+			score.worst <- max(scores, na.rm=TRUE)
+			slope <- apply(as.matrix(apply(as.matrix(results), 2, diff)), 2, mean)
+			results.avg <- apply(as.matrix(results), 2, mean)
+			limit.max <- (rep(1, length(rand)) - results.avg)/slope
+			which.dim <- which.min(abs(limit.max))
+			rand.max <- limit.max[which.dim]*slope + results.avg
+			limit.min <- (rep(0, length(rand)) - results.avg)/slope
+			which.dim <- which.min(abs(limit.min))
+			rand.min <- limit.min[which.dim]*slope + results.avg
+			incr <- (rand.max-rand.min)/50
+			results <- rep(-1, 51)		
+			for (i in 1:51) {
+				temp <- c(solutions, rand.min + (i - 1)*incr)
+				temp.coefs <- qr.coef(qr.eqs, temp)
+				if (any(temp.coefs < 0 & temp.coefs > 1)) next
+				score <- sum(abs(rowSums(t(t(opt.eval)*temp.coefs))-SNR.avg))
+				results[i] <- score
+			}
+			results <- which(results <= score.worst + tol*10)
+			rand.max <- rand.min + (results[length(results)] - 1)*incr
+			rand.min <- rand.min + (results[1] - 1)*incr
+			return((rand.min + rand.max)/2)
+		}
+##
+##
+################################################################################################
+		
+		solutions <- c(solutions, optimizeCoefficients())
+		qr.coefs <- qr.coef(qr(linear.eqs), solutions)
+	}
+	
+################################################################################################
+## DEFINE METHYLATION CALCULATION SUB-FUNCTION 
+################################################################################################
+	calcMeth.sub <- function(SNR.list) {
+		numerator <- 0
+		denominator <- 0
+		N <- length(SNR.list)
+		SNR.sum <- sum(SNR.list, na.rm=TRUE)	
+		for (i in 1:N) {
+			SNR.i <- SNR.list[i]
+			if (is.na(SNR.i)) next
+			denominator <- denominator + SNR.i
+			switch(method,
+				   "weighted" = numerator <- numerator + (i - 1) * SNR.i / (N - 1),
+				   "proportion" = numerator <- numerator + min(1, i - 1) * SNR.i
+				   )
+		}
+		if ((denominator <= 0) | (numerator < 0)) return(NA)
+		return(min(1, numerator / denominator))
+	}
+##
+##
+################################################################################################
+	
+	results <- c()
+	for (i in 1:num.fragments) {
+		results <- c(results, calcMeth.sub(SNR.list[cg.list[[i]]]*qr.coefs[(i - 1)*num.SNRs + cg.list[[i]]]))
+	}
+	names(results) <- cgs
+	return(results)
 }
 
 
@@ -85,25 +265,41 @@ analyzeCpGs <- function(fragments, peaks, method=c("weighted", "proportion")) {
 		CpG.fragment.map <- c(CpG.fragment.map, rep(i, fragments[[i]]$CpGs))
 	}
 	for (i in 1:CpG.num) {
-		## FRAGMENT COLLISIONS WITH CpG-CONTAINING FRAGMENTS
-		collisions.i <- fragments[[CpG.fragment.map[i]]]$collision.IDs
-		## COUNT NUMBER OF THESE THAT CONTAIN CpGs THEMSELVES
-		cg.collision.counts <- unlist(lapply(collisions.i,
-			function(x) {
-				if (is.null(x) | identical(x, integer(0))) return(1)
-				return(length(which((unlist(lapply(fragments[x], slot, "CpGs")) > 0)
-					& !(unlist(lapply(fragments[x], slot, "conversion.control"))))) + 1)
+		collisions.i <- CpG.fragment.map[i]
+		## FRAGMENT COLLISIONS WITH CpG-CONTAINING FRAGMENTS (IDENTIFY TOTAL SET/STRING OF OVERLAPPING FRAGMENTS)
+		repeat {
+			temp <- collisions.i
+			for (collision in collisions.i) {
+				temp <- unique(c(temp, unlist(fragments[[collision]]$collision.IDs)))
 			}
-		))
-		## COUNT NUMBER OF THESE THAT DO NOT CONTAIN CpGs
-		non.cg.collision.counts <- unlist(lapply(collisions.i,
-			function(x) {
-				if (is.null(x) | identical(x, integer(0))) return(1)
-				return(length(which((unlist(lapply(fragments[x], slot, "CpGs")) < 1)
-					& !(unlist(lapply(fragments[x], slot, "conversion.control"))))))
-			}
-		))
-		CpG.data[i] <- calcMeth(fragments[[CpG.fragment.map[i]]]$MW, peaks, method, cg.collision.counts, non.cg.collision.counts)
+			if (identical(collisions.i, temp)) break
+			collisions.i <- temp
+		}
+		## WHAT IS EXPECTED MOLECULAR WEIGHT FOR EACH FRAGMENT?
+		MWs <- unique(unlist(lapply(fragments[collisions.i], slot, "MW")))
+		MWs <- MWs[order(MWs)]
+		## MAP ALL COLLIDING FRAGMENTS TO LIST OF MOLECULAR WEIGHTS
+		collisions.i <- lapply(MWs, 
+							   function(x) {
+								temp <- findFragments(x, fragments)
+								IDs <- unlist(lapply(temp, slot, "ID"))
+								return(unique(IDs))
+							   }
+							)
+		## IDENTIFY WHICH FRAGMENTS ARE NON-CONTRIBUTORY TO METHYLATION STATE (E.G. NON-CG-CONTAINING FRAGMENTS)
+		non.cg.fragments <- setdiff(unlist(collisions.i), CpG.fragment.map)
+		## IDENTIFY PEAKS AMONG PEAKLIST THAT MAP TO INPUT MOLECULAR WEIGHTS
+		which.peaks.matched <- findPeaks(MWs, unlist(lapply(peaks, slot, "MW.actual")))
+		which.peaks.matched.theory <- findPeaks(MWs, unlist(lapply(peaks, slot, "MW.theoretical")))
+		which.peaks.matched[which(is.na(which.peaks.matched))] <- which.peaks.matched.theory[which(is.na(which.peaks.matched))]
+		## HANDLE CASES WHERE UNABLE TO FIND ANY APPROPRIATE PEAKS => INDETERMINATE METHYLATION INFORMATION
+		if (all(is.na(which.peaks.matched))) {
+			CpG.data[i]	<- NA
+			next
+		}
+		## EXTRACT SIGNAL-TO-NOISE RATIO (SNR) INFORMATION FOR EACH PEAK
+		SNR.list <- unlist(lapply(peaks[which.peaks.matched], slot, "SNR"))
+		CpG.data[i] <- calcMeth(SNR.list, method, collisions.i, non.cg.fragments)[as.character(CpG.fragment.map[i])]
 	}
 	return(CpG.data)
 }
