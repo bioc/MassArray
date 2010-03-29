@@ -195,7 +195,6 @@ setMethod("initialize",
 			CpG.num <- length(CpG.num)
 		}
 		.Object@CpG.data <- matrix(NA, nrow=length(.Object@samples), ncol=CpG.num)
-		print(length(.Object@samples))
 		if (length(.Object@samples) > 0) {
 			for (i in 1:length(.Object@samples)) {
 				sample.i <- .Object@samples[[i]]
@@ -313,8 +312,9 @@ setMethod("[", "MassArrayData",
 				x@groups <- x@groups[i]
 			}
 		}
+		## DIRECT COLUMN ACCESS NOT CURRENTLY SUPPORTED => MUST IMPLEMENT IN NEXT RELEASE OF SCRIPTS
 		if (!missing("j")) {
-			print(j)
+			warning("(subscript 'j') not currently supported in this version")
 		}
 		return(x)
 	}

@@ -48,7 +48,7 @@ calcPercentConversion <- function(fragments, peaks) {
 }
 
 
-calcMeth <- function(SNR.list, method=c("weighted", "proportion"), fragments=rep(1, length(SNR.list)), non.cg.fragments=numeric(0), prune.non.cg.peaks=TRUE, na.rm=FALSE) {
+calcMeth <- function(SNR.list, fragments=rep(1, length(SNR.list)), non.cg.fragments=numeric(0), method=c("weighted", "proportion"), prune.non.cg.peaks=TRUE, na.rm=FALSE) {
 ## HANDLE INPUTS TO ENSURE IMPORTANT ASSUMPTIONS (E.G. SNR.LIST REPRESENTS NUMERICAL INPUT)
 	method <- match.arg(method)
 	SNR.list <- as.numeric(SNR.list)
@@ -299,7 +299,7 @@ analyzeCpGs <- function(fragments, peaks, method=c("weighted", "proportion")) {
 		}
 		## EXTRACT SIGNAL-TO-NOISE RATIO (SNR) INFORMATION FOR EACH PEAK
 		SNR.list <- unlist(lapply(peaks[which.peaks.matched], slot, "SNR"))
-		CpG.data[i] <- calcMeth(SNR.list, method, collisions.i, non.cg.fragments)[as.character(CpG.fragment.map[i])]
+		CpG.data[i] <- calcMeth(SNR.list, fragments=collisions.i, non.cg.fragments=non.cg.fragments, method=method)[as.character(CpG.fragment.map[i])]
 	}
 	return(CpG.data)
 }
