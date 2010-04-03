@@ -40,6 +40,9 @@ setMethod("combine",
 		if (!identical(x@chr, y@chr)) {
 			stop("sequences are non-adjacent (chromosome mismatch)")
 		}
+		if ((length(x@start) < 1) | (length(x@end) < 1) | (length(y@start) < 1) | (length(y@end) < 1)) {
+			stop("positional information not specified -- see position() function")
+		}
 		original <- x@strand
 		## NEED TO UPDATE THIS STRAND SPECIFICITY FOR MASSARRAYDATA OBJECTS!!!
 		if (identical(x@strand, "-")) {
