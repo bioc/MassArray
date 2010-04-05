@@ -268,24 +268,10 @@ setMethod("[", "MassArrayData",
 		}
 		if (!missing("i")) {
 			if (is.logical(i)) {
-				if (length(i) > length(x@samples)) {
-					stop("(subscript 'i') logical subscript too long")
+				if (length(i) != length(x@samples)) {
+					stop("(subscript 'i') logical subscript does not match dimensions of MassArrayData object")
 				}
-				samples <- list()
-				if (length(i) < 1) {
-					x@samples <- list()
-					x@CpG.data <- matrix(nrow=0, ncol=dim(x@CpG.data)[2])
-					x@groups <- character()
-					return(x)	
-				}
-				for (sample.i in 1:length(i)) {
-					if (i[sample.i]) samples <- c(samples, x@samples[[sample.i]])
-				}
-				x@samples <- samples
-				x@CpG.data <- matrix(x@CpG.data[i, ], ncol=dim(x@CpG.data)[2], dimnames=list(samples(x), 1:dim(x@CpG.data)[2]))
-				x@CpG.data.combined <- as.matrix(x@CpG.data.combined[which(!is.na(match(unique(samples(x)), samples(x)))), ])
-				x@groups <- x@groups[i]
-				i <- 0
+				i <- which(i)
 			}
 			if (is.character(i)) {
 				matched <- match(samples(x), i)
@@ -312,9 +298,31 @@ setMethod("[", "MassArrayData",
 				x@groups <- x@groups[i]
 			}
 		}
-		## DIRECT COLUMN ACCESS NOT CURRENTLY SUPPORTED => MUST IMPLEMENT IN NEXT RELEASE OF SCRIPTS
 		if (!missing("j")) {
-			warning("(subscript 'j') not currently supported in this version")
+			if (is.character(j)) {
+				stop("(subscript 'j') subscript must contain numeric or logical input")
+			}
+			if (is.logical(j)) {
+				if (length(j) != dim(x@CpG.data)[2]) {
+					stop("(subscript 'j') logical subscript does not match dimensions of MassArrayData object")
+				}
+				j <- which(j)
+			}
+			j <- as.integer(j)
+			if (is.integer(j)) {
+				if (max(j) > dim(x@CpG.data)[2] | min(j) < 1) {
+					stop("(subscript 'j') subscript out of bounds")
+				}
+				x@CpG.data <- matrix(x@CpG.data[, j], ncol=length(j), dimnames=list(samples(x), j))
+				x@CpG.data.combined <- matrix(x@CpG.data.combined[, j], ncol=length(j), dimnames=list(samples(x), j))
+## REMOVE CGs FROM SEQUENCE AND FRAGMENTATION LISTS
+				CG.positions <- unlist(gregexpr("(CG|YG|CR)", x@sequence))
+				for (CG in CG.positions[setdiff(1:length(CG.positions), j)]) {
+					substr(x@sequence, CG, CG) <- "T"
+				}
+				x@fragments.T <- inSilicoFragmentation(x@sequence, x@fwd.tag, x@rev.tag, type="T", x@lower.threshold, x@upper.threshold, x@fwd.primer, x@rev.primer)
+				x@fragments.C <- inSilicoFragmentation(x@sequence, x@fwd.tag, x@rev.tag, type="C", x@lower.threshold, x@upper.threshold, x@fwd.primer, x@rev.primer)
+			}
 		}
 		return(x)
 	}

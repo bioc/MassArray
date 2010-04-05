@@ -29,7 +29,7 @@ Objects can be created by calls of the form \code{new("MassArrayData", sequence,
     \item{\code{samples}:}{List containing object of class \code{MassArraySpectrum}, each corresponding to spectral data from a single sample}
     \item{\code{groups}:}{List of the group name to which each sample belongs}
     \item{\code{CpG.data}:}{Matrix containing analyzed methylation data, where each row is a sample and each column is a CG dinucleotide site}
-    \item{\code{CpG.data.combined}:}{Object of class \code{"matrix"} ~~ }
+    \item{\code{CpG.data.combined}:}{Matrix containing methylation data combined from multiple objects (or collapsed from within a single object), where each row is a sample and each column is a CG dinucleotide site}
   }
 }
 \section{Methods}{
