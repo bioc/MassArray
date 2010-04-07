@@ -132,6 +132,7 @@ calcMeth <- function(SNR.list, fragments=rep(1, length(SNR.list)), non.cg.fragme
 	qr.coefs <- qr.coef(qr(linear.eqs), solutions)
 ## IF SYSTEM OF EQUATIONS IS INCOMPLETE, DETERMINE IDEAL VALUES FOR REMAINING COEFFICIENTS BY RANDOM-VALUE OPTIMIZATION
 	if (any(is.na(qr.coefs))) {
+		warning("Ambiguous methylation data, calculating optimal values (please be patient as this may take considerable time)", call.=FALSE, immediate.=TRUE)
 		na.coefs <- which(is.na(qr.coefs))
 		temp <- matrix(0, nr=length(na.coefs), nc=N)
 		for (i in 1:length(na.coefs)) {
@@ -163,6 +164,8 @@ calcMeth <- function(SNR.list, fragments=rep(1, length(SNR.list)), non.cg.fragme
 # ENSURE THAT STAY WITHIN BOUNDARY LIMITS FOR A COEFFICIENT (0<=X<=1)
 							if (all(rand >= 0 & rand <= 1)) break
 						}
+# ENSURE THAT POINTS DO NOT CONVERGE TOO CLOSE TO PREVIOUS SOLUTIONS						
+						if (any(sqrt(apply(as.matrix(results - rand)**2, 1, sum)) < 0.1, na.rm=TRUE)) next
 						temp <- c(solutions, rand)
 						temp.coefs <- qr.coef(qr.eqs, temp)
 # ENSURE THAT STAY WITHIN BOUNDARY LIMITS FOR A COEFFICIENT (0<=X<=1)
@@ -292,14 +295,14 @@ analyzeCpGs <- function(fragments, peaks, method=c("weighted", "proportion")) {
 		which.peaks.matched <- findPeaks(MWs, unlist(lapply(peaks, slot, "MW.actual")))
 		which.peaks.matched.theory <- findPeaks(MWs, unlist(lapply(peaks, slot, "MW.theoretical")))
 		which.peaks.matched[which(is.na(which.peaks.matched))] <- which.peaks.matched.theory[which(is.na(which.peaks.matched))]
-		## HANDLE CASES WHERE UNABLE TO FIND ANY APPROPRIATE PEAKS => INDETERMINATE METHYLATION INFORMATION
-		if (all(is.na(which.peaks.matched))) {
-			CpG.data[i]	<- NA
-			next
-		}
 		## EXTRACT SIGNAL-TO-NOISE RATIO (SNR) INFORMATION FOR EACH PEAK
-		SNR.list <- unlist(lapply(peaks[which.peaks.matched], slot, "SNR"))
-		CpG.data[i] <- calcMeth(SNR.list, fragments=collisions.i, non.cg.fragments=non.cg.fragments, method=method)[as.character(CpG.fragment.map[i])]
+		SNR.list <- which.peaks.matched
+		## HANDLE CASES WHERE UNABLE TO FIND ONE OR MORE PEAKS => INDETERMINATE METHYLATION INFORMATION
+		if (any(!is.na(which.peaks.matched))) {
+			SNR.list[which(!is.na(which.peaks.matched))] <- unlist(lapply(peaks[which.peaks.matched[which(!is.na(which.peaks.matched))]], slot, "SNR"))
+		}
+		## CALCULATE PERCENT METHYLATION
+		CpG.data[i] <- calcMeth(SNR.list, fragments=collisions.i, non.cg.fragments=non.cg.fragments, method=method, na.rm=TRUE)[as.character(CpG.fragment.map[i])]
 	}
 	return(CpG.data)
 }
