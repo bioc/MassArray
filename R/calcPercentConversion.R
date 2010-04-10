@@ -31,7 +31,14 @@ calcPercentConversion <- function(fragments, peaks) {
 	for (i in controls) {
 		frags.i <- fragments[[i]]$"MW"
 		peaks.i <- findPeaks(frags.i, unlist(lapply(peaks, slot, "MW.actual")))
+		peaks.i.theory <- findPeaks(frags.i, unlist(lapply(peaks, slot, "MW.theoretical")))
+		peaks.i[which(is.na(peaks.i))] <- peaks.i.theory[which(is.na(peaks.i))]
 		SNRs.i <- unlist(lapply(peaks[peaks.i], slot, "SNR"))
+## EXTRACT SIGNAL-TO-NOISE RATIO (SNR) INFORMATION FOR EACH PEAK
+		SNRs.i <- peaks.i
+		if (any(!is.na(peaks.i))) {
+			SNRs.i[which(!is.na(peaks.i))] <- unlist(lapply(peaks[peaks.i[which(!is.na(peaks.i))]], slot, "SNR"))
+		}
 ## MAP ALL COLLIDING FRAGMENTS TO LIST OF MOLECULAR WEIGHTS
 		collisions.i <- lapply(frags.i, 
 							   function(x) {
