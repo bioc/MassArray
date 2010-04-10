@@ -187,7 +187,7 @@ evaluateSNPs <- function(x, verbose=TRUE, plot=TRUE) {
 			}
 		)
 		best.SNPs <- c()
-		## ALL POTENTIAL SNPs HAVE BEEN IDENTIFIED, NOW IT'S TIME TO COMPARE ON A SAMPLE-BY-SAMPLE BASIS
+		## ALL POTENTIAL SNPs HAVE BEEN IDENTIFIED, NOW ITS TIME TO COMPARE ON A SAMPLE-BY-SAMPLE BASIS
 		for (i in 1:length(which.rxn)) {
 			sample <- x$samples[[which.rxn[i]]]
 			## CALCULATE AVERAGE PER-FRAGMENT SNR
@@ -213,7 +213,7 @@ evaluateSNPs <- function(x, verbose=TRUE, plot=TRUE) {
 					)))
 #					matched.sequence <- match(SNPs[[1]]$sequence, new.sample.sequences)
 					if (length(matched.peak) < 1) return()
-					SNR <- new.sample.peaks[[matched.peak]]$SNR
+					SNR <- max(unlist(lapply(new.sample.peaks[matched.peak], slot, "SNR")), na.rm=TRUE)
 					if (is.na(SNR)) return()
 					if (SNR <= 0) return()
 					for (i in 1:length(SNPs)) {
