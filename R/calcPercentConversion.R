@@ -218,6 +218,9 @@ calcMeth <- function(SNR.list, fragments=rep(1, length(SNR.list)), non.cg.fragme
 				results[i] <- score
 			}
 			results <- which(results <= score.worst + tol*10)
+			if (length(results) < 1) {
+				return(results.avg)
+			}
 			rand.max <- rand.min + (results[length(results)] - 1)*incr
 			rand.min <- rand.min + (results[1] - 1)*incr
 			return((rand.min + rand.max)/2)
