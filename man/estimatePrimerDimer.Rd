@@ -18,7 +18,7 @@ estimatePrimerDimer(fragments, peaks, method = c("ratio", "mann-whitney"))
   Primer dimers are calculated by: 1) identifying fragments that occur within the expected primer sequence, 2) identifying which of these fragments is assayable, and 3) comparing the overall signal for primer peaks and peaks from the rest of the amplicon.
 }
 \value{
-  Returns a list containing primer dimer ratios or significance estimates (i.e. p-values) depending on the analytical method specified (\code{"ratio"} or \code{"mann-whitney"}, respectively)
+  Returns a list containing primer dimer ratios or significance estimates (i.e. p-values) depending on the analytical method specified (\code{"ratio"} or \code{"mann-whitney"}, respectively).  Returns \code{"NA"} in cases where insufficient data is present to calculate primer dimer levels.
 }
 \author{ Reid F. Thompson (\email{rthompso@aecom.yu.edu}), John M. Greally (\email{jgreally@aecom.yu.edu}) }
 \examples{

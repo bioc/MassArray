@@ -17,10 +17,13 @@ estimatePrimerDimer <- function (fragments, peaks, method=c("ratio", "mann-whitn
 	## CALCULATE SCALED SNR FOR EACH PEAK
 	data.primer <- unlist(lapply(peaks[peaks.primer], slot, "SNR")) / unlist(lapply(peaks[peaks.primer], slot, "ref.intensity"))
 	data.noprimer <- unlist(lapply(peaks[peaks.noprimer], slot, "SNR")) / unlist(lapply(peaks[peaks.noprimer], slot, "ref.intensity"))
-	SNR.p <- mean(unlist(lapply(peaks[peaks.primer], slot, "SNR")),na.rm=TRUE)
-	SNR.np <- mean(unlist(lapply(peaks[peaks.noprimer], slot, "SNR")),na.rm=TRUE)
-	R.p <- mean(unlist(lapply(peaks[peaks.primer], slot, "ref.intensity")),na.rm=TRUE)
-	R.np <- mean(unlist(lapply(peaks[peaks.noprimer], slot, "ref.intensity")),na.rm=TRUE)
+#	SNR.p <- mean(unlist(lapply(peaks[peaks.primer], slot, "SNR")),na.rm=TRUE)
+#	SNR.np <- mean(unlist(lapply(peaks[peaks.noprimer], slot, "SNR")),na.rm=TRUE)
+#	R.p <- mean(unlist(lapply(peaks[peaks.primer], slot, "ref.intensity")),na.rm=TRUE)
+#	R.np <- mean(unlist(lapply(peaks[peaks.noprimer], slot, "ref.intensity")),na.rm=TRUE)
+
+	## IF INSUFFICIENT DATA TO CALCULATE PRIMER DIMER
+	if ((length(data.primer) < 1) | (length(data.noprimer) < 1)) return(NA)
 
 	method <- match.arg(method)
 	## SIMPLE RATIO OF OVERALL PEAK HEIGHTS
