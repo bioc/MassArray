@@ -7,6 +7,15 @@ identifySNPs <- function (peak.sequence, sequence, rxn=c("T", "C")) {
 	## DEFINE ACCESSORY FUNCTIONS
 	## BASE COMPOSITION WILL ANALYZE A SEQUENCE AND GENERATE INDIVIDUAL NUCLEOTIDE COUNTS
 	baseComposition <- function(sequence) {
+		if (length(grep("R", sequence)) == 1) {
+			return(c(baseComposition(sub("R", "A", sequence)), baseComposition(sub("R", "G", sequence))))
+		}
+		if (length(grep("Y", sequence)) == 1) {
+			return(c(baseComposition(sub("Y", "C", sequence)), baseComposition(sub("Y", "T", sequence))))
+		}
+		if (length(grep("N", sequence)) == 1) {
+			return(c(baseComposition(sub("N", "A", sequence)), baseComposition(sub("N", "T", sequence)), baseComposition(sub("N", "C", sequence)), baseComposition(sub("N", "G", sequence))))
+		}
 		base.counts <- list("A" = 0,
 			"T" = 0,
 			"C" = 0,
