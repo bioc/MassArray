@@ -61,6 +61,10 @@ calcMeth <- function(SNR.list, fragments=rep(1, length(SNR.list)), non.cg.fragme
 	SNR.list <- as.numeric(SNR.list)
 	num.SNRs <- length(SNR.list)
 	non.cg.fragments <- unique(non.cg.fragments)
+	if ((num.SNRs > length(fragments)) & (any(SNR.list == 0))) {
+		SNR.list <- SNR.list[which(SNR.list != 0)]
+		num.SNRs <- length(SNR.list)
+	}
 	if (num.SNRs != length(fragments)) {
 		warning("lengths of input SNR.list and fragments do not match")
 		return(NA)
