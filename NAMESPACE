@@ -19,9 +19,9 @@ exportClasses(
 	MassArrayData
 )
 
-S3Method(plot, MassArrayData)
+S3method(plot, MassArrayData)
 
-S3Method(sum, MassArraySpectrum)
+S3method(sum, MassArraySpectrum)
 
 export(
 	ampliconPrediction,
