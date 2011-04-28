@@ -104,10 +104,6 @@ setMethod("initialize",
 		.Object@fragments.T <- inSilicoFragmentation(.Object@sequence, fwd.tag, rev.tag, type="T", .Object@lower.threshold, .Object@upper.threshold, .Object@fwd.primer, .Object@rev.primer, multiple.conversion)
 		fragment.starts <- unlist(lapply(.Object@fragments.T, slot, "position"))
 		fragment.ends <- fragment.starts + unlist(lapply(.Object@fragments.T, slot, "length")) - 1
-#		primer.fragments <- which((fragment.ends <= nchar(.Object@fwd.tag) + .Object@fwd.primer) | (fragment.starts >= nchar(.Object@sequence) + nchar(.Object@fwd.tag) - .Object@rev.primer + 1))
-#		for (i in primer.fragments) {
-#			.Object@fragments.T[[i]]$primer <- TRUE
-#		}
 		for (i in required) {
 			fragments.i <- which((fragment.ends >= i) & (fragment.starts <= i + attr(required, "match.length")[which(required == i)] - 1))
 			for (j in fragments.i) {
@@ -118,10 +114,6 @@ setMethod("initialize",
 		.Object@fragments.C <- inSilicoFragmentation(.Object@sequence, .Object@fwd.tag, .Object@rev.tag, type="C", .Object@lower.threshold, .Object@upper.threshold, .Object@fwd.primer, .Object@rev.primer, multiple.conversion)
 		fragment.starts <- unlist(lapply(.Object@fragments.C, slot, "position"))
 		fragment.ends <- fragment.starts + unlist(lapply(.Object@fragments.C, slot, "length")) - 1
-#		primer.fragments <- which((fragment.ends <= nchar(.Object@fwd.tag) + .Object@fwd.primer) | (fragment.starts >= nchar(.Object@sequence) - .Object@rev.primer + 1))
-#		for (i in primer.fragments) {
-#			.Object@fragments.C[[i]]$primer <- TRUE
-#		}
 		for (i in required) {
 			fragments.i <- which((fragment.ends >= i) & (fragment.starts <= i + attr(required, "match.length")[which(required == i)] - 1))
 			for (j in fragments.i) {
@@ -143,7 +135,6 @@ setMethod("initialize",
 			return(.Object)
 		}
 		if (verbose) cat("Importing matched peaks file (", file, "):\n", sep="")
-#	    data <- read.table(file, header=header, skip=skip, sep=sep, colClasses=c("character", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric", "character", "character"), comment.char=comment.char, fill=fill)
 	    data <- read.table(file, header=header, skip=skip, sep=sep, comment.char=comment.char, fill=fill)
 		## EPITYPER DATA (MATCHED PEAKS) CAN COME IN TWO FORMATS (OLD & NEW) => HANDLE DIFFERENTLY
 	    if ("Amplicon" %in% colnames(data)) {
@@ -186,7 +177,7 @@ setMethod("initialize",
 			.Object@samples[[i]]$quality.adducts <- adduct
 		}
 		## CALCULATE CpG METHYLATION CALLS FOR CPGS
-		if (verbose) cat("FINISHED\n\tAnalyzing CpG methylation ... ")
+		if (verbose) cat("FINISHED\n\tAnalyzing CpG methylation ...")
 		CpG.num <- gregexpr("CG", paste(.Object@fwd.tag, .Object@sequence, .Object@rev.tag, sep=""))[[1]]
 		if (CpG.num[1] < 0) {
 			CpG.num <- 0	
@@ -197,6 +188,7 @@ setMethod("initialize",
 		.Object@CpG.data <- matrix(NA, nrow=length(.Object@samples), ncol=CpG.num)
 		if (length(.Object@samples) > 0) {
 			for (i in 1:length(.Object@samples)) {
+				if (verbose) cat(".")
 				sample.i <- .Object@samples[[i]]
 				switch(sample.i$rxn,
 					"T" = CpG.data.i <- rev(analyzeCpGs(.Object@fragments.T, sample.i$peaks, method)),
@@ -207,7 +199,7 @@ setMethod("initialize",
 		}
 		.Object@CpG.data.combined <- .Object@CpG.data
 
-		if (verbose) cat("FINISHED\n")
+		if (verbose) cat(" FINISHED\n")
 		return(.Object)
 	}
 )
@@ -224,7 +216,6 @@ setValidity("MassArrayData",
 		CpGs.C <- which(unlist(lapply(object@fragments.C, slot, "CpGs")) > 0 & !unlist(lapply(object@fragments.C, slot, "conversion.control")))
 		CpGs.C <- CpGs.C[which(!duplicated(unlist(lapply(object@fragments.C[CpGs.C], slot, "position"))))]
 		CpG.num.C <- sum(unlist(lapply(object@fragments.C[CpGs.C], slot, "CpGs")))
-#		CpG.num.C <- sum(unlist(lapply(object@fragments.C, slot, "CpGs"))[!unlist(lapply(object@fragments.C, slot, "conversion.control"))])
 		if (!identical(CpG.num, CpG.num.C)) return(FALSE)
 		## TEST WHETHER SAMPLE COUNT MATCHES CpG METHYLATION DATA
 		if (!identical(length(object@samples), dim(object@CpG.data)[1])) return(FALSE)
@@ -315,7 +306,7 @@ setMethod("[", "MassArrayData",
 				}
 				x@CpG.data <- matrix(x@CpG.data[, j], ncol=length(j), dimnames=list(samples(x), j))
 				x@CpG.data.combined <- matrix(x@CpG.data.combined[, j], ncol=length(j), dimnames=list(samples(x), j))
-## REMOVE CGs FROM SEQUENCE AND FRAGMENTATION LISTS
+				## REMOVE CGs FROM SEQUENCE AND FRAGMENTATION LISTS
 				CG.positions <- unlist(gregexpr("(CG|YG|CR)", x@sequence))
 				for (CG in CG.positions[setdiff(1:length(CG.positions), j)]) {
 					substr(x@sequence, CG, CG) <- "T"

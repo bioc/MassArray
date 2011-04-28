@@ -61,6 +61,12 @@ calcMeth <- function(SNR.list, fragments=rep(1, length(SNR.list)), non.cg.fragme
 	SNR.list <- as.numeric(SNR.list)
 	num.SNRs <- length(SNR.list)
 	non.cg.fragments <- unique(non.cg.fragments)
+## REMOVE NAs FROM INPUT SNR LIST
+	if (any(is.na(SNR.list))) {
+		if (!na.rm) return(NA)
+		if (all(is.na(SNR.list))) return(NA)
+		SNR.list[which(is.na(SNR.list))] <- 0
+	}
 	if ((num.SNRs > length(fragments)) & (any(SNR.list == 0))) {
 		SNR.list <- SNR.list[which(SNR.list != 0)]
 		num.SNRs <- length(SNR.list)
@@ -72,12 +78,6 @@ calcMeth <- function(SNR.list, fragments=rep(1, length(SNR.list)), non.cg.fragme
 	if (num.SNRs < 1) {
 		warning("SNR.list input must contain at least one value")
 		return(NA)
-	}
-## REMOVE NAs FROM INPUT SNR LIST
-	if (any(is.na(SNR.list))) {
-		if (!na.rm) return(NA)
-		if (all(is.na(SNR.list))) return(NA)
-		SNR.list[which(is.na(SNR.list))] <- 0
 	}
 ## CALCULATE AVERAGE SNR PER CONTRIBUTING FRAGMENT
 	num.fragments <- length(unique(unlist(fragments)))
@@ -143,7 +143,7 @@ calcMeth <- function(SNR.list, fragments=rep(1, length(SNR.list)), non.cg.fragme
 	qr.coefs <- qr.coef(qr(linear.eqs), solutions)
 ## IF SYSTEM OF EQUATIONS IS INCOMPLETE, DETERMINE IDEAL VALUES FOR REMAINING COEFFICIENTS BY RANDOM-VALUE OPTIMIZATION
 	if (any(is.na(qr.coefs))) {
-		warning("Ambiguous methylation data, calculating optimal values (please be patient as this may take considerable time)", call.=FALSE, immediate.=TRUE)
+		warning("Ambiguous methylation data, calculating optimal values (please be patient as this may take considerable time)")
 		na.coefs <- which(is.na(qr.coefs))
 		temp <- matrix(0, nr=length(na.coefs), nc=N)
 		for (i in 1:length(na.coefs)) {
