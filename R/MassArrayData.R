@@ -92,11 +92,17 @@ setMethod("initialize",
 		else {
 			.Object@fwd.primer <- fwd.primer	
 		}
+		if (.Object@fwd.primer <= 0) {
+			warning("FWD primer not specified! Please consult the MassArray package manual for details on specifying primers")
+		}
 		if (rev.primer <= 0) {
 			.Object@rev.primer <- max(0, attr(regexpr("(?<=[<])[^<]*$", .Object@sequence, perl=TRUE), "match.length"))
 		}
 		else {
 			.Object@rev.primer <- rev.primer	
+		}
+		if (.Object@rev.primer <= 0) {
+			warning("REV primer not specified! Please consult the MassArray package manual for details on specifying primers")
 		}
 		.Object@sequence <- gsub("[<>]", "", .Object@sequence)
 		position(.Object) <- position
@@ -156,18 +162,23 @@ setMethod("initialize",
 				}
 			)
 		}
-		## CALCULATE PRIMER DIMER LEVELS FOR EACH SAMPLE
+		## ESTIMATE PRIMER DIMER LEVELS FOR EACH SAMPLE
 		if (verbose) cat("FINISHED\n\tEstimating primer dimer level(s) ... ")
-		for (i in 1:length(.Object@samples)) {
-			sample.i <- .Object@samples[[i]]
-			switch(sample.i$rxn,
-				"T" = primerdimer <- estimatePrimerDimer(.Object@fragments.T, sample.i$peaks),
-				"C" = primerdimer <- estimatePrimerDimer(.Object@fragments.C, sample.i$peaks)
-			)
-			.Object@samples[[i]]$quality.primerdimer <- primerdimer
+		if (.Object@fwd.primer * .Object@rev.primer > 0) {
+			for (i in 1:length(.Object@samples)) {
+				sample.i <- .Object@samples[[i]]
+				switch(sample.i$rxn,
+					"T" = primerdimer <- estimatePrimerDimer(.Object@fragments.T, sample.i$peaks),
+					"C" = primerdimer <- estimatePrimerDimer(.Object@fragments.C, sample.i$peaks)
+				)
+				.Object@samples[[i]]$quality.primerdimer <- primerdimer
+			}
+			if (verbose) cat("FINISHED\n\tEstimating adduct level(s) ... ")
 		}
-		## CALCULATE PRIMER DIMER LEVELS FOR EACH SAMPLE
-		if (verbose) cat("FINISHED\n\tEstimating adduct level(s) ... ")
+		else {
+			if (verbose) cat("ERROR (no primers specified)\n\tEstimating adduct level(s) ... ")	
+		}
+		## ESTIMATE PREVALENCE OF ADDUCTS IN EACH SAMPLE
 		for (i in 1:length(.Object@samples)) {
 			sample.i <- .Object@samples[[i]]
 			switch(sample.i$rxn,
