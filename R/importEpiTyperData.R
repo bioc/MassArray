@@ -46,13 +46,13 @@ importEpiTyperData <- function (data, MassArrayObject, verbose=TRUE) {
 			sample.fragments.MW <- unlist(lapply(sample.fragments, slot, "MW"))
 			peaks <- c()
 			for (j in 1:dim(sample.data)[1]) {
-				switch(as.character(sample.data[j, "Ref.type"]),
+				switch(as.character(sample.data[j, grep("Ref[._ ]type", colnames(sample.data), ignore.case=TRUE)]),
 					"NAAD" = adduct <- "Na",
 					"K-AD" = adduct <- "K",
 					adduct <- NULL
 				)
 				new <- FALSE
-				switch(as.character(sample.data[j, "Ref.type"]),
+				switch(as.character(sample.data[j, grep("Ref[._ ]type", colnames(sample.data), ignore.case=TRUE)]),
 					"NAAD" = type <- "Modified",
 					"K-AD" = type <- "Modified",
 					"UNKN" = {
@@ -73,7 +73,7 @@ importEpiTyperData <- function (data, MassArrayObject, verbose=TRUE) {
 				)
 				if (length(grep("^Missing", as.character(sample.data[j, 1]))) > 0) missing <- TRUE
 				else missing <- FALSE
-				peak.count <- length(which(!is.na(findPeaks(sample.fragments.MW, sample.data[j, "Sample.mass"]))))
+				peak.count <- length(which(!is.na(findPeaks(sample.fragments.MW, sample.data[j, grep("Sample.mass", colnames(sample.data), ignore.case=TRUE)]))))
 				## SPLIT PEAK DESCRIPTIONS INTO THEIR POTENTIAL AND/OR ACTUAL COMPONENTS
 				description <- unlist(strsplit(as.character(sample.data[j, "Description"]), "[;,]"))
 				## REMOVE EXTRANEOUS WHITE SPACES
@@ -86,13 +86,13 @@ importEpiTyperData <- function (data, MassArrayObject, verbose=TRUE) {
 				## EXTRACT SEQUENCE FROM 5OH-...-3P AND OTHER SIMILAR FRAGMENTS
 				description <- unique(sub(".*[-]([ATCG0-9]+)[-].*", "\\1", description))
 				peaks <- c(peaks, new("MassArrayPeak", ID=as.integer(j),
-					MW.theoretical=sample.data[j, "Reference.mass"],
-					MW.actual=sample.data[j, "Sample.mass"],
+					MW.theoretical=sample.data[j, grep("Reference.mass", colnames(sample.data), ignore.case=TRUE)],
+					MW.actual=sample.data[j, grep("Sample.mass", colnames(sample.data), ignore.case=TRUE)],
 					probability=sample.data[j, "Probability"],
 					SNR=sample.data[j, "SNR"],
 					height=sample.data[j, "Height"],
-					sample.intensity=sample.data[j, "Sample.intensity"],
-					ref.intensity=sample.data[j, "Reference.intensity"],
+					sample.intensity=sample.data[j, grep("Sample.intensity", colnames(sample.data), ignore.case=TRUE)],
+					ref.intensity=sample.data[j, grep("Reference.intensity", colnames(sample.data), ignore.case=TRUE)],
 					sequence=as.character(description),
 					adduct=adduct, type=type, charge=charge, missing=missing, new=new,
 					collisions=nchar(gsub("[^;]", "", as.character(sample.data[j, "Description"]))),
@@ -208,7 +208,7 @@ importEpiTyperData.new <- function (data, MassArrayObject, verbose=TRUE) {
 				)
 				if (length(grep("^Missing", as.character(sample.data[j, "Peak"]))) > 0) missing <- TRUE
 				else missing <- FALSE
-				peak.count <- length(which(!is.na(findPeaks(sample.fragments.MW, sample.data[j, "Sample.mass"]))))
+				peak.count <- length(which(!is.na(findPeaks(sample.fragments.MW, sample.data[j, grep("Sample.mass", colnames(sample.data), ignore.case=TRUE)]))))
 				## SPLIT PEAK DESCRIPTIONS INTO THEIR POTENTIAL AND/OR ACTUAL COMPONENTS
 				description <- unlist(strsplit(as.character(sample.data[j, "Description"]), "[;,]"))
 				## REMOVE EXTRANEOUS WHITE SPACES
@@ -221,13 +221,13 @@ importEpiTyperData.new <- function (data, MassArrayObject, verbose=TRUE) {
 				## EXTRACT SEQUENCE FROM 5OH-...-3P AND OTHER SIMILAR FRAGMENTS
 				description <- unique(sub(".*[-]([ATCG0-9]+)[-].*", "\\1", description))
 				peaks <- c(peaks, new("MassArrayPeak", ID=as.integer(j),
-					MW.theoretical=sample.data[j, "Reference.mass"],
-					MW.actual=sample.data[j, "Sample.mass"],
+					MW.theoretical=sample.data[j, grep("Reference.mass", colnames(sample.data), ignore.case=TRUE)],
+					MW.actual=sample.data[j, grep("Sample.mass", colnames(sample.data), ignore.case=TRUE)],
 					probability=sample.data[j, "Probability"],
 					SNR=sample.data[j, "SNR"],
 					height=sample.data[j, "Height"],
-					sample.intensity=sample.data[j, "Sample.intensity"],
-					ref.intensity=sample.data[j, "Reference.intensity"],
+					sample.intensity=sample.data[j, grep("Sample.intensity", colnames(sample.data), ignore.case=TRUE)],
+					ref.intensity=sample.data[j, grep("Reference.intensity", colnames(sample.data), ignore.case=TRUE)],
 					sequence=as.character(description),
 					adduct=adduct, type=type, charge=charge, missing=missing, new=new,
 					collisions=nchar(gsub("[^;]", "", as.character(sample.data[j, "Description"]))),
