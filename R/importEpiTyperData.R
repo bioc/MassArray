@@ -181,13 +181,13 @@ importEpiTyperData.new <- function (data, MassArrayObject, verbose=TRUE) {
 			sample.fragments.MW <- unlist(lapply(sample.fragments, slot, "MW"))
 			peaks <- c()
 			for (j in 1:dim(sample.data)[1]) {
-				switch(as.character(sample.data[j, "Ref.type"]),
+				switch(as.character(sample.data[j, grep("Ref[._ ]type", colnames(sample.data), ignore.case=TRUE)]),
 					"NAAD" = adduct <- "Na",
 					"K-AD" = adduct <- "K",
 					adduct <- NULL
 				)
 				new <- FALSE
-				switch(as.character(sample.data[j, "Ref.type"]),
+				switch(as.character(sample.data[j, grep("Ref[._ ]type", colnames(sample.data), ignore.case=TRUE)]),
 					"NAAD" = type <- "Modified",
 					"K-AD" = type <- "Modified",
 					"UNKN" = {

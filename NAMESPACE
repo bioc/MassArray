@@ -8,7 +8,7 @@ importFrom(methods, new, slot, validObject)
 
 importFrom(stats, as.ts, coef, dendrapply, deviance, end, formula,
           frequency, IQR, is.leaf, knots, mad, median, naprint, pf,
-          pnorm, print.anova, printCoefmat, pt, quantile, reformulate,
+          pnorm, printCoefmat, pt, quantile, reformulate,
           residuals, start, symnum, terms, time, ts, tsp, wilcox.test,
           write.ftable)
 
