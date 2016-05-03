@@ -1,7 +1,7 @@
 Package: MassArray
 Type: Package
 Title: Analytical Tools for MassArray Data
-Version: 1.24.0
+Version: 1.25.0
 Date: 2009-05-19
 Author: Reid F. Thompson <rthompso@aecom.yu.edu>, John M. Greally <jgreally@aecom.yu.edu>
 Maintainer: Reid F. Thompson <rthompso@aecom.yu.edu>
