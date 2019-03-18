@@ -23,7 +23,7 @@ convControl <- function (sequence, fragmentation, multiple=FALSE) {
 		## (NOT TRUE CONVERSION CONTROL BECAUSE BIASED IN FAVOR OF CONVERSION)
 		if (fragmentation[[which.fragment]]$primer) next
 		## DO NOT INCLUDE CONTROL FRAGMENTS THAT HAVE PEAK COLLISIONS
-		if (fragmentation[[which.fragment]]$collisions > 0) next
+		if (any(fragmentation[[which.fragment]]$collisions > 0)) next
 		## DO NOT INCLUDE CONTROL FRAGMENTS THAT WILL INTRODUCE PEAK COLLISIONS
 		if (multiple) {
 			sequence.plus.control <- gsub("CA", "CR", fragmentation[[which.fragment]]$sequence)
